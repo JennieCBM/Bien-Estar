@@ -56,7 +56,7 @@
             <div class="col-4">
                 <q-img 
                 class="asistente"
-                src="img\Asistente.jpg"
+                src="img\Asistente.png"
                 :ratio="16/9"
                 width="100%"
                 style="opacity: .5"
