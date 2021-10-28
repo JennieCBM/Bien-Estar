@@ -86,14 +86,15 @@ export default {
       console.log(click)
     },
      handleScroll(link) {
-       console.log("move")
+       console.log(link)
        if(link){
          const ele = document.getElementById(link)
          console.log(ele)
          if(ele){
            const target = scroll.getScrollTarget(ele)
+           console.log(ele.offsetTop, ele.scrollHeight)
            const offset = ele.offsetTop - ele.scrollHeight
-           const duration = 1000
+           const duration = 300
            scroll.setVerticalScrollPosition(target, offset, duration)
          }else{
            return;
@@ -125,7 +126,7 @@ export default {
         navbar.forEach(tab => {
           tab.classList.remove('hidden-navbar');
         });
-        //img.removeEventListener('click',this.reactivateNavbar);
+        img.removeEventListener('click',this.reactivateNavbar);
       }
       //e.position para saber donde estoy
     }
