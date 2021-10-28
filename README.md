@@ -1,4 +1,4 @@
-# Bienestar (bien-estar)
+# Bien-Estar 
 
 Bienestar integral es un concepto relativo al buen estado de personas o colectivos. 
 
