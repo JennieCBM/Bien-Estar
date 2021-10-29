@@ -3,6 +3,7 @@
     <conocenos />
     <especialidades />
     <enlaces />
+    <contactenos />
   </q-page>
 </template>
 
@@ -10,6 +11,7 @@
 import conocenos from '../components/Conocenos.vue';
 import especialidades from '../components/Especialidades.vue';
 import enlaces from '../components/Enlaces.vue';
+import contactenos from '../components/Contactenos.vue';
 export default {
   name: 'PageIndex',
   mounted(){
@@ -17,7 +19,8 @@ export default {
   components: {
     conocenos,
     especialidades,
-    enlaces
+    enlaces,
+    contactenos
   }
 }
 </script>

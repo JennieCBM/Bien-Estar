@@ -59,6 +59,7 @@
                 src="img\Asistente.png"
                 :ratio="16/9"
                 width="100%"
+                height="100%"
                 style="opacity: .5"
                 />
             </div>
