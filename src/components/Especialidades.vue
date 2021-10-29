@@ -152,7 +152,7 @@
         <q-img
           class=" overflow-normal"
           style="left:15%; top: 0"
-          src="img\Woman-3.jpg"
+          src="img\Woman_3.jpg"
           :ratio="13/9"
           width="80%"
           >
