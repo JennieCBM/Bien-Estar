@@ -1,9 +1,9 @@
 <template>
   <q-page>
     <conocenos />
-    <especialidades />
-    <enlaces />
-    <contactenos />
+    <especialidades/>
+    <enlaces/>
+    <contactenos/>
   </q-page>
 </template>
 

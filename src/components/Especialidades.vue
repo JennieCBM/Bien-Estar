@@ -1,5 +1,6 @@
 <template>
   <q-page>
+    
     <q-banner
       class="text-center text-dark text-uppercase center-align"
       style="height: 23em; background: #eeeef6"
@@ -87,10 +88,12 @@
       
 
       <div class="marco-imagen_central" />
+      
       <q-img class="marco-imagen_central" src="img\flecha1.png" />
     </div>
     <!-- Listas de especialidades 1-->
     <div class="row bg-info q-pb-none extra_light text-body1" style="font-size: 1.8em; line-height: 1.3em">
+      
       <div class="offset-1 col-3">
         <q-list dense padding class="rounded-borders" style="padding: 40% 0 0 0%">
           <q-item style="display:flex; flex-direction: row; align-items:center">
@@ -207,6 +210,7 @@
     </div>
     <div id="especialidades"></div>
   </q-page>
+  <div id="profesionales"></div>
 </template>
 <script>
 export default {
@@ -217,6 +221,7 @@ export default {
       autoplay: true,
     };
   },
+
 };
 </script>
 <style>

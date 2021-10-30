@@ -11,7 +11,7 @@
                     <q-btn round size="4em" icon="img:icons/001.png" />
                 </q-card-section>
                 <q-card-section>
-                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Integral" />
+                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Integral" @click="openModal('integral')"/>
                 </q-card-section>
             </q-card>
             <q-card flat class="my-card col-3 text-center">
@@ -19,7 +19,7 @@
                     <q-btn round size="4em" icon="img:icons/002.png" />
                 </q-card-section>
                 <q-card-section>
-                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Kids" />
+                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Kids" @click="openModal('kids')" />
                 </q-card-section>
             </q-card>
             <q-card flat class="my-card col-3 text-center">
@@ -27,7 +27,7 @@
                     <q-btn round size="4em" icon="img:icons/003.png" />
                 </q-card-section>
                 <q-card-section>
-                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Mujer" />
+                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Mujer" @click="openModal('mujer')"/>
                 </q-card-section>
             </q-card>
             <q-card flat class="my-card col-3 text-center">
@@ -35,7 +35,7 @@
                     <q-btn round size="4em" icon="img:icons/004.png" />
                 </q-card-section>
                 <q-card-section>
-                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Diversidad" />
+                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Diversidad" @click="openModal('diversidad')"/>
                 </q-card-section>
             </q-card>
         </div>
@@ -65,6 +65,38 @@
             </div>
             
         </div>
+        <q-dialog
+            v-model="open"
+            >
+            <q-card class="">
+                <q-card-section>
+                    <div class="text-h5 demi-bold text-uppercase text-center">{{titulo}}</div>
+                    <div v-if="subtitulo" style="font-size:1.6em" class="text-subtitle1 extra_light q-pt-md text-center">{{subtitulo}}</div>
+                </q-card-section>
+                <q-separator/>
+                <q-card-section v-if="contenido" class="q-pa-md text-center extra_light" style="font-size:1.6em">
+                    {{contenido}}
+                </q-card-section>
+                <q-card-section v-if="titulo_2">
+                    <div class="text-h5 demi-bold text-uppercase text-center">{{titulo_2}}</div>
+                </q-card-section>
+                <q-card-section v-if="contenido_2" class="q-pa-md text-center extra_light" style="font-size:1.6em">
+                    {{contenido_2}}
+                </q-card-section>
+                <q-card-section v-if="contenido_3" class="q-pa-md text-center extra_light" style="font-size:1.6em">
+                    {{contenido_3}}
+                </q-card-section>
+                <q-card-section v-if="contenido_4" class="q-pa-md text-center extra_light" style="font-size:1.6em">
+                    {{contenido_4}}
+                </q-card-section>
+                <q-card-section v-if="contenido_5" class="q-pa-md text-center extra_light" style="font-size:1.6em">
+                    {{contenido_5}}
+                </q-card-section>
+                <q-card-actions align="right" class="bg-white">
+                    <q-btn flat label="Volver" v-close-popup />
+                </q-card-actions>
+            </q-card>
+        </q-dialog>
     </q-page> 
 </template>
 <script>
@@ -72,9 +104,60 @@ export default {
   name: "Enlaces",
   data() {
     return {
-      
+      titulo: null,
+      titulo_2: null,
+      subtitulo: null,
+      contenido: null,
+      contenido_2: null,
+      contenido_3: null,
+      contenido_4: null,
+      contenido_5: null,
+      open: false
     };
   },
+  methods:{
+     openModal(type){
+         this.titulo = null;
+         this.subtitulo = null;
+         this.titulo_2 = null;
+         this.contenido = null;
+         this.contenido_2 = null;
+         this.contenido_3= null;
+        this.contenido_4= null;
+        this.contenido_5= null;
+         
+         switch (type) {
+            case 'integral':
+                this.titulo= "Bien-Estar Integral";
+                this.contenido= "Programa donde recibirás apoyo de un equipo multidisciplinario de  profesionales en Bien-Estar. Donde te ayudaremos a mejorar tu calidad de vida, entender tus emociones y manejar el estrés.";
+                break;
+            case 'kids':
+                this.titulo="Bien-Estar Kids";
+                this.subtitulo="Brindamos salud y bienestar integral a niñas, niños y adolecentes.";
+                this.contenido="Unidad de Atención donde encuentras un grupo de especialistas en bienestar y salud infantil que trabaja de manera integral por la salud emocional y cognitiva de los niños, niñas y adolescentes. Reconoce el desarrollo de los niños y niñas, previene patologías que puedan afectar su calidad de vida, identifica afectaciones en la salud emocional y cognitiva y trata las condiciones y enfermedades de salud mental";
+                this.titulo_2= "¿Qué nos motiva?";
+                this.contenido_2= "Cuidar el bienestar de los niños y adolecentes con una mirada integral, respetuosa y de calidad.Ayudar a formar niños y adolescentes sanos y felices";
+                break;
+            case 'mujer':
+                this.titulo="Bien-Estar Mujer";
+                this.subtitulo= "Espacio de atención integral que busca mejorar el bienestar, la salud y la calidad de vida de las mujeres en Chile.";
+                this.titulo_2= "¿Qué nos motiva?";
+                this.contenido_2= "Bienestar integral de la mujer.";
+                this.contenido_3="Salud física y emocional en las diferentes etapas de la vida.";
+                this.contenido_4="Mejoramiento de su calidad de vida.";
+                this.contenido_5="Acompañamiento personalizado en las diferentes etapas de la vida.";
+                break;
+            case 'diversidad':
+                this.titulo="Bien-Estar Diversidad";
+                this.subtitulo="Un espacio de Bien-Estar para Todes.";
+                this.contenido="Este es un espacio de atención en salud seguro, libre de discriminación, abierto para todas las personas para atender motivos de consulta de salud general, salud mental y acompañamiento en procesos de transición. Los profesionales que hacemos parte de Bien-Estar Diversidad estamos dispuestos a ofrecerte una atención respetuosa y de calidad.";
+                this.titulo_2="¿Qué nos motiva?";
+                this.contenido_2="Ofrecer un espacio de acompañamiento y orientación no patologizante para personas LGBTIQA+ o que se estén cuestionando su orientación sexual y/o identidad de género.Consejería y orientación individual o grupal.";
+                break;
+         }
+             this.open = true;
+     }
+  }
 };
 </script>
 <style>

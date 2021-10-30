@@ -122,6 +122,7 @@
   </q-page>
 </template>
 <script>
+import {Loading} from "quasar";
 export default {
   name: "Conocenos",
   mounted(){
@@ -129,8 +130,13 @@ export default {
       nav.style.visibility="visible";
   },
   methods:{
-    goToAbout(){
-      this.$router.push({name:'about'})
+    async goToAbout(){
+      return;
+ /*      Loading.show(); */
+      await this.$emit('AboutLayout', ()=>this.$router.push({name:'about'}));
+      
+/*       Loading.hide(); */
+
     }
   }
 };

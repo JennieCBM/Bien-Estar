@@ -12,7 +12,7 @@ export default {
        }
    },
    mounted(){
-       this.$emit('AboutLayout');
+       
    }
 }
 </script>

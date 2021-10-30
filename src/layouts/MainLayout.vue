@@ -33,7 +33,7 @@
             <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('profesionales')">
               <span class="q-pl-md q-pr-md">Profesionales</span>
             </div>
-            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('Sucursales')">
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('sucursales')">
               <span class="q-pl-md q-pr-md">Sucursales</span>
             </div>
         </div>
@@ -70,15 +70,30 @@ export default {
     },
      handleScroll(link) {
        if(link){
-         const ele = document.getElementById(link)
-         if(ele){
-           const target = scroll.getScrollTarget(ele)
-           const offset = ele.offsetTop - ele.scrollHeight
-           const duration = 400
+         const el = document.getElementById(link)
+         console.log(el)
+         if(el){
+           const target = getScrollTarget(el)
+           console.log("target", target)
+           const offset = el.offsetTop - el.scrollHeight;
+           console.log("offset",offset)
+           const duration = 800;
+
            scroll.setVerticalScrollPosition(target, offset, duration)
          }else{
            return;
          }
+         /* if(el){
+           let scrollEl = el.closest('.scroll') 
+           console.log("scrollel",scroll)
+           const target = getScrollTarget(el)
+           const offset = el.offsetTop - scrollEl.offsetTop
+           const duration = 800
+           scroll.setVerticalScrollPosition(target, offset, duration)
+           scroll.animVerticalScrollTo()
+         }else{
+           return;
+         } */
        }
     },
     reactivateNavbar(){
