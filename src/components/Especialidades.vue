@@ -79,7 +79,7 @@
               Conoce nuestras unidades de atencion integral
             </div>
             <div class="q-mt-lg text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt culpa in debitis quas amet, saepe veniam, explicabo voluptatum libero et minima? Veniam laudantium illo blanditiis enim dolorum architecto consequuntur magni.
+              Brindamos salud y bienestar integral a niñas, niños y adolecentes.
             </div>
           </div>
         </div>

@@ -1,1 +1,23 @@
 // app global css in SCSS form
+@font-face {
+    font-family: DemiBold;
+    src: url('./fonts/Aristotelica\ Display\ DemiBold\ Trial.ttf');
+  }
+@font-face {
+    font-family: ExtraLight;
+    src: url('./fonts/Aristotelica\ Display\ ExtraLight\ Trial.ttf');
+}
+@font-face {
+    font-family: Regular;
+    src: url('./fonts/AristotelicaSmallCaps-Regular.ttf');
+}
+.demi_bold{
+    font-family: 'DemiBold'
+}
+.extra_light{
+    font-family: 'ExtraLight';
+}
+.regular_font{
+    font-family: 'Regular';
+}
+  

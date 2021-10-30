@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf" class="rounded-borders" @scroll="hideNavBar">
+  <q-layout view="lHh Lpr lFf" class="rounded-borders demi_bold" @scroll="hideNavBar">
       <q-header elevated class="bg-transparent" style="height: 5em">
         <div class="row full-width bg-primary" style="height: 100%">
           <q-toolbar class="justify-end" style="margin-right: 10em">
@@ -14,57 +14,33 @@
             </q-btn>
           </q-toolbar>
         </div>
-        <!-- <div class="hide_nav">
-          <q-btn round flat>
-            <q-img
-              src="../../public/icons/Bien_Estar_PNG-01.png"
-              spinner-color="white"
-              :ratio="4/3" 
-            />
-          </q-btn>
-        </div> -->
-        <!-- <div class="q-mt-md hide-nav">
-          <q-fab
-            flat
-            round
-            v-model="fab1"
-            color="accent"
-            icon="img:icons/Bien_Estar_PNG-01.png"
-            direction="center"
-            :hide-label="true"
-            padding="lg"
-            class="hide_nav"           
-          >
-          <div style="row bg-red">
-            <q-fab-action style="margin: 0 3em 0 3em !important " flat anchor="start" color="dark" @click="handleScroll('conocenos')" label="Conocenos" />
-            <q-fab-action style="margin: 0 3em 0 3em !important " flat anchor="start" color="dark" @click="handleScroll('especialidades')" label="Especialidades" />
-            <q-fab-action style="margin: 0 3em 0 3em !important " flat anchor="start" color="dark" @click="handleScroll('equipo_medico')" label="Equipo Médico" />
-            <q-fab-action style="margin: 0 3em 0 3em !important " flat anchor="start" color="dark" @click="handleScroll('sucursales')" label="Sucursales" />
-          </div>
-          </q-fab>
-        </div> -->
-        <div class="row" >
-          <q-tabs v-model="tab" align="left" class="col-4 text-dark" style="max-height: 3em">
-              <q-tab id="tab-navbar" label="Conócenos" class="text-uppercase" @click="handleScroll('conocenos')"/>
-              <q-tab id="tab-navbar" label="Especialidades" class="text-uppercase" @click="handleScroll('especialidades')"/>           
-          </q-tabs>
-          <div class="col-4 q-pr-xl q-pl-xl" >
-            <q-img
-              id="logo-navbar"
-              src="../../public/icons/Bien_Estar_PNG-01.png"
-              spinner-color="white"
-              :ratio="1" 
-            />
-          </div>
-          <q-tabs v-model="tab" align="right" class="col-4  text-dark" style="max-height: 3em" >
-            <q-tab id="tab-navbar" label="Equipo médico" class="text-uppercase" @click="handleScroll('equipo_medico')"/>
-            <q-tab id="tab-navbar" label="Sucursales" class="text-uppercase" @click="handleScroll('sucursales')"/>
-          </q-tabs>
+
+
+        <div class="row" id="nav-row" style="display: flex; flex-direction: row; justify-content: space-around;">
+            <div class="text-subtitle2 text-dark text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('conocenos')">
+              <span class="q-pl-md q-pr-md">Conócenos</span>
+            </div>
+            <div class="text-subtitle2 text-dark text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('especialidades')">
+              <span class="q-pl-md q-pr-md">Especialidades</span>
+            </div>
+            <div class="col-4 q-pr-xl q-pl-xl" id="logo-navbar" >
+              <q-img
+                src="../../public/icons/Bien_Estar_PNG-01.png"
+                spinner-color="white"
+                :ratio="1" 
+              />
+            </div>
+            <div class="text-subtitle2 text-dark text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('profesionales')">
+              <span class="q-pl-md q-pr-md">Profesionales</span>
+            </div>
+            <div class="text-subtitle2 text-dark text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('Sucursales')">
+              <span class="q-pl-md q-pr-md">Sucursales</span>
+            </div>
         </div>
         
       </q-header>     
     <q-page-container>
-      <router-view />
+      <router-view @AboutLayout="ChangeNavbar"/>
     </q-page-container>
   </q-layout>
 </template>
@@ -81,6 +57,10 @@ export default {
   },
   components: {
   },
+  mounted(){
+    /* let nav = document.querySelector('#nav-row');
+      nav.classList.toggle('ocultarTodo'); */
+  },
   methods: {
     click(){
       console.log(click)
@@ -94,7 +74,7 @@ export default {
            const target = scroll.getScrollTarget(ele)
            console.log(ele.offsetTop, ele.scrollHeight)
            const offset = ele.offsetTop - ele.scrollHeight
-           const duration = 300
+           const duration = 400
            scroll.setVerticalScrollPosition(target, offset, duration)
          }else{
            return;
@@ -102,30 +82,50 @@ export default {
        }
     },
     reactivateNavbar(){
-      let navbar = document.querySelectorAll('.q-tab__label')
+      let navbar = document.querySelectorAll('#tab-navbar');
+      let row = document.getElementById('nav-row');
+      row.classList.toggle('changesize_navbar');
       navbar.forEach(tab=>{
         tab.classList.toggle('hidden-navbar');
       })
     },
+    ChangeNavbar(){
+      console.log("hola")
+      let nav = document.querySelector('#nav-row');
+      console.log(nav)
+      nav.style.visibility="hidden";
+      
+    },
     hideNavBar(e){
-      /* console.log(e); */
         let img = document.getElementById('logo-navbar');
-        let navbar = document.querySelectorAll('.q-tab__label')
-      if(e.position > 4){
-        img.classList.remove('small-logo__desabled')
+        let navbar = document.querySelectorAll('#tab-navbar');
+        let row = document.getElementById('nav-row');
+        console.log(navbar)
+        /* if(!e){
+          console.log(img,navbar);
+          this.reactivateNavbar();
+          img.classList.add('ocultarTodo');
+        }else{
+          navbar.classList.remove('ocultarTodo');
+          img.classList.remove('ocultarTodo');
+        } */
+      if(e && e.position > 4){
+        img.classList.remove('small-logo__disabled')
         img.classList.add('small-logo');
         navbar.forEach(tab =>{
           tab.classList.add('hidden-navbar')
         })
+        row.classList.add('changesize_navbar')
         img.addEventListener('click', this.reactivateNavbar)
       }
-      if(e.position < 3){
+      if(e && e.position < 3){
         img.classList.remove('small-logo')
-        img.classList.add('small-logo__desabled')
+        img.classList.add('small-logo__disabled')
         //agregar a click de img
         navbar.forEach(tab => {
           tab.classList.remove('hidden-navbar');
         });
+        row.classList.remove('changesize_navbar')
         img.removeEventListener('click',this.reactivateNavbar);
       }
       //e.position para saber donde estoy
@@ -136,6 +136,7 @@ export default {
 <style>
 .q-layout__shadow:after{
   box-shadow: none !important;
+  
 }
 .hide_nav{
   background: transparent;
@@ -151,60 +152,45 @@ export default {
 }
 .small-logo{
   transition: .3s all;
-  transform: scale(0.3) translate(0, -35em);
+  /* position: absolute;
+  top: 0;
+  right: 33.33333%; */
+  transform: scale(0.2) translate(0, -65em);
   cursor: pointer;
 }
-.small-logo__desabled{
+.small-logo img{
+  background: #faf099;
+  border-radius: 50%;
+}
+.small-logo__disabled{
   transition: .3s all;
   cursor: normal;
   transform: scale(1) translate(0,0);
 }
-.small-logo:hover{
+/* .small-logo:hover{
   background: #bfd1956b;
   border-radius: 50%;
   cursor: pointer;  
-}
+} */
 .hidden-navbar{
   transition: .5s;
   transform: scale(0) translate(0,-100em);
   pointer-events: none;
 }
-
-/* borrar todo abajo */
-.q-fab__actions{
-  width: 100vw;
-  background: transparent;
-/*   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background: grey; */
+.ocultarTodo{
+  display: none;
 }
-.q-fab__icon-holder{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  position: static;
-  color: yellow !important;
- /*  top:-10px; */
-  
+.changesize_navbar{
+  max-height: 0;
 }
-.q-btn--fab .fas{
- width: 5em;
-  height: 5em;
+.disable_cursor{
+  pointer-events: none;
 }
-.q-btn--fab :hover{
-  background: transparent;
+#tab-navbar span{
+  cursor: pointer;
 }
-
-.q-fab__icon-holder img{
-  width: 5em;
-  height: 5em;
-/*   margin: 0 !important;
-  padding: 0; */
-
-  
+#tab-navbar span:hover{
+  background: rgba(175, 175, 175, 0.1); 
 }
 
 </style>

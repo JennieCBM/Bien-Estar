@@ -22,7 +22,7 @@
           </div>
         </q-card-section>
         <q-card-actions>
-          <q-btn color="dark" rounded class="text-weight-light q-ml-xs"
+          <q-btn color="dark" rounded class="text-weight-light q-ml-xs" @click="goToAbout"
             >Conócenos</q-btn
           >
         </q-card-actions>
@@ -124,12 +124,19 @@
 <script>
 export default {
   name: "Conocenos",
+  mounted(){
+    let nav = document.querySelector('#nav-row');
+      console.log(nav)
+      nav.style.visibility="visible";
+  },
+  methods:{
+    goToAbout(){
+      this.$router.push({name:'about'})
+    }
+  }
 };
 </script>
 <style>
-/* body{
-  overflow-x:hidden;
-} */
 .conocenos {
   background-image: url("../../public/img/background_yoga.png");
   background-size: 100%;

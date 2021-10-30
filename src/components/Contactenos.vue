@@ -71,7 +71,6 @@
             name="user_email"
             label="EMAIL"
             type="email"
-            hint="Email"
             :rules="[
               (val) =>
                 (val !== null && val !== '') || 'Este campo es requerido',
