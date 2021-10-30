@@ -5,24 +5,24 @@
       <q-card
         class="my-card bg-transparent text-dark conocenos_mensaje no-shadow"
       >
-        <q-card-section class="q-pb-none">
-          <div class="text-h4 text-uppercase text-bold">Bienestar al</div>
-          <div class="text-h4 text-uppercase text-bold">alcance de todos</div>
+        <q-card-section class="q-pb-md">
+          <div class="text-h3 text-uppercase demi_bold">Bienestar al</div>
+          <div class="text-h3 text-uppercase demi_bold">alcance de todos</div>
         </q-card-section>
         <q-card-section>
-          <div class="text-h6 text-uppercase text-weight-thin text-black">
+          <div class="text-h4 text-uppercase extra_light text-dark">
             Lo que hacemos
           </div>
-          <div class="text-weight-light">
+          <div class="extra_light" style="font-size: 1.3em">
             Entregar
-            <span class="text-bold">bienestar y salud integral</span> con los
-            más altos estándares de calidad, junto a especialistas calificado,
+            <span class="demi_bold">bienestar y salud integral</span> con los
+            más altos estándares de calidad, junto a especialistas calificados,
             con innovación constante en nuestro portafolio de servicios,
-            <span class="text-bold">a un precio justo.</span>
+            <span class="demi_bold">a un precio justo.</span>
           </div>
         </q-card-section>
         <q-card-actions>
-          <q-btn color="dark" rounded class="text-weight-light q-ml-xs" @click="goToAbout"
+          <q-btn color="dark" dense rounded  class="demi_bold q-ml-xs" size="md" @click="goToAbout"
             >Conócenos</q-btn
           >
         </q-card-actions>
@@ -51,15 +51,15 @@
           "
           >
             <q-card-section class="q-pb-none q-ma-none">
-              <div class="text-h4 text-uppercase text-bold text-left q-pb-lg">
+              <div class="text-h4 text-uppercase demi_bold text-left q-pb-md">
                 ¿Qué nos motiva?
               </div>
             </q-card-section>
-            <q-card-section class="q-ma-none" style="font-size: 1.3em; max-width: 80%">
-              <div class="text-weight-light text-left">
-                Tu <span class="text-bold">Bienestar</span>en las diferentes etapas de tu vida.
+            <q-card-section class="q-ma-none extra_light" style="font-size: 1.5em; max-width: 58%">
+              <div class=" text-left">
+                Tu <span class="demi_bold">Bien-Estar</span> en las diferentes etapas de tu vida.
               </div>
-              <div class="text-weight-light text-left">
+              <div class=" text-left q-mt-md">
                 Mejorar tu calidad de vida fisico y emocional.
               </div>
             </q-card-section>
@@ -82,12 +82,12 @@
             "
         >
           <q-card-section class="q-pb-none ">
-            <div class="text-h4 text-uppercase text-bold text-center">
+            <div class="text-h4 text-uppercase demi_bold text-center">
               Profesionalismo
             </div>
           </q-card-section>
-          <q-card-section style="font-size: 1.3em;">
-            <div class="text-weight-light text-center">
+          <q-card-section style="font-size: 1.5em; ">
+            <div class="extra_light text-center">
               Especialistas altamente capacitados,
               <br />
               honestos y comprometidos.
@@ -96,7 +96,7 @@
         </q-card>
         <div class="col-8 q-pa-none" style="display: flex; flex-direction: column;  align-items:center; justify-content: center">
           <q-img
-            style="top:-25%;"
+            style="top:-25%; opacity: .8"
             class=""
             src="img\Hands_yellow.png"
             :ratio="16/12"
@@ -108,16 +108,16 @@
 
     <!-- banner amarillo -->
     <q-banner class="bg-primary text-center text-dark" style="height: 15em">
-      <div class="text-h4 text-uppercase text-bold text-center ">
+      <div class="text-h4 text-uppercase demi_bold text-center ">
         Clientes Satisfechos
       </div>
       <br>
-      <div class="text-weight-light" style="font-size: 1.5em">
+      <div class="extra_light" style="font-size: 1.5em">
           Descubre como encontrar tu  
-            <span class="text-bold">Bien-Estar</span>
+            <span class="demi_bold">Bien-Estar</span>
             integral 
           </div>
-          <div class="text-weight-light" style="font-size: 1.5em">junto a nosotros brindando experiencias memorables.</div>
+          <div class="extra_light" style="font-size: 1.5em">junto a nosotros brindando experiencias memorables.</div>
     </q-banner>
   </q-page>
 </template>
@@ -126,7 +126,6 @@ export default {
   name: "Conocenos",
   mounted(){
     let nav = document.querySelector('#nav-row');
-      console.log(nav)
       nav.style.visibility="visible";
   },
   methods:{

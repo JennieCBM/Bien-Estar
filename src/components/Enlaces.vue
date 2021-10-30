@@ -42,16 +42,16 @@
         <!-- Convenios -->
         <div class="row bg-secondary text-dark " style="">
             <div class="offset-2 col-5 q-pt-xl">
-                <div class="text-h4 text-uppercase text-bold ">
+                <div class="text-h4 text-uppercase demi-bold ">
                     Convenios
                 </div>
-                <div class="text-weight-light q-mt-md" style="font-size: 1.5em">
+                <div class="extra_light q-mt-md" style="font-size: 1.6em">
                     Tenemos convenios para tu empresa, contáctanos
                 </div>
-                <div class="text-weight-light" style="font-size: 1.5em">
+                <div class="extra_light" style="font-size: 1.6em">
                     y consigue beneficios únicos.
                 </div>
-                <!-- <q-btn color="primary" rounded class="text-weight-light q-ml-xs q-mt-md" label="Saber más" text-color="dark"/> -->
+                <!-- <q-btn color="primary" rounded class="extra_light q-ml-xs q-mt-md" label="Saber más" text-color="dark"/> -->
             </div>
             <div class="col-4">
                 <q-img 

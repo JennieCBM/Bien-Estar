@@ -25,19 +25,19 @@
             style="margin-left: 25em; margin-right: 25em"
           />
           <div class="q-ma-lg">
-            <div class="text-h4 text-bold text-center">Paciente María Pía</div>
+            <div class="text-h4 demi_bold text-center">Paciente María Pía</div>
             <br />
-            <div class="text-uppercase text-bold" style="font-size: 1.5em">
+            <div class="text-uppercase demi_bold" style="font-size: 1.5em">
               Ahorro / precio justo
             </div>
-            <div class="text-weight-light" style="font-size: 1.5em">
+            <div class="extra_light" style="font-size: 1.5em;">
               <q-icon
                 name="img:img/Comillas_abiertas.png"
                 size="3em"
                 class="q-mr-lg"
               />
               ¡No pagues de más! paga lo justo por tu
-              <span class="text-bold">Bien-Estar!</span>
+              <span class="demi_bold">Bien-Estar!</span>
               <q-icon
                 name="img:img/Comillas_cerradas.png"
                 size="3em"
@@ -73,12 +73,12 @@
             margin: 8em 0 0 11em;
             ">
             <div 
-            class="text-uppercase text-bold text-white"
-            style="font-size: 2.1em" 
+            class="text-uppercase demi_bold text-white text-h4"
+            style="line-height: 1em" 
             >
               Conoce nuestras unidades de atencion integral
             </div>
-            <div class="q-mt-lg text-white">
+            <div class="q-mt-lg extra_light text-white" style="max-width: 80%; font-size: 1.5em">
               Brindamos salud y bienestar integral a niñas, niños y adolecentes.
             </div>
           </div>
@@ -90,13 +90,13 @@
       <q-img class="marco-imagen_central" src="img\flecha1.png" />
     </div>
     <!-- Listas de especialidades 1-->
-    <div class="row bg-info q-pb-none extra_light text-body1" style="font-size: 1.8em">
+    <div class="row bg-info q-pb-none extra_light text-body1" style="font-size: 1.8em; line-height: 1.3em">
       <div class="offset-1 col-3">
         <q-list dense padding class="rounded-borders" style="padding: 40% 0 0 0%">
           <q-item style="display:flex; flex-direction: row; align-items:center">
             <q-icon class="q-pr-sm" name="remove" color="dark"/> Psiquiatría
           </q-item>
-          <q-item style="display:flex; flex-direction: row; align-items:center">
+          <q-item style="display:flex; flex-direction: row; align-items:center ">
             <q-icon class="q-pr-sm" name="remove" color="dark"/> Psicología
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center">
@@ -147,7 +147,7 @@
       </div>
     </div>
     <!-- Listas de especialidades 2-->
-    <div class="row bg-info extra_light text-body1" style="font-size: 1.8em; padding-bottom: 3em;">
+    <div class="row bg-info extra_light text-body1" style="font-size: 1.8em; line-height: 1.3em; padding-bottom: 3em;">
       <div class="col-6">          
         <q-img
           class=" overflow-normal"

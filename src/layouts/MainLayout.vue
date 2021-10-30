@@ -3,24 +3,24 @@
       <q-header elevated class="bg-transparent" style="height: 5em">
         <div class="row full-width bg-primary" style="height: 100%">
           <q-toolbar class="justify-end" style="margin-right: 10em">
-            <q-btn class="bg-white q-ma-sm" flat round dense color="white">
+            <q-btn class="bg-white q-ma-sm" flat round dense color="white" @click="GoToLink('https://www.facebook.com/Centro-Integral-Bien-Estar-100957679021251')">
               <q-icon name="fab fa-facebook-f" class="text-dark"></q-icon>
             </q-btn>
-            <q-btn class="bg-white q-ma-sm" flat round dense color="white">
+            <q-btn class="bg-white q-ma-sm" flat round dense color="white" @click="GoToLink('https://www.instagram.com/centrointegral.bienestar/')">
               <q-icon name="fab fa-instagram" class="text-dark"></q-icon>
             </q-btn>
-            <q-btn class="bg-white q-ma-sm" flat round dense color="white">
+            <q-btn class="bg-white q-ma-sm" flat round dense color="white" @click="GoToLink('https://api.whatsapp.com/send?phone=56973752280&text=%C2%A1Hola!%20')">
               <q-icon name="fab fa-whatsapp" class="text-dark"></q-icon>
             </q-btn>
           </q-toolbar>
         </div>
 
 
-        <div class="row" id="nav-row" style="display: flex; flex-direction: row; justify-content: space-around;">
-            <div class="text-subtitle2 text-dark text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('conocenos')">
+        <div class="row text-body1 text-dark" id="nav-row" style="display: flex; flex-direction: row; justify-content: space-around;">
+            <div class=" text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('conocenos')">
               <span class="q-pl-md q-pr-md">Conócenos</span>
             </div>
-            <div class="text-subtitle2 text-dark text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('especialidades')">
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('especialidades')">
               <span class="q-pl-md q-pr-md">Especialidades</span>
             </div>
             <div class="col-4 q-pr-xl q-pl-xl" id="logo-navbar" >
@@ -30,10 +30,10 @@
                 :ratio="1" 
               />
             </div>
-            <div class="text-subtitle2 text-dark text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('profesionales')">
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('profesionales')">
               <span class="q-pl-md q-pr-md">Profesionales</span>
             </div>
-            <div class="text-subtitle2 text-dark text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('Sucursales')">
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('Sucursales')">
               <span class="q-pl-md q-pr-md">Sucursales</span>
             </div>
         </div>
@@ -62,17 +62,17 @@ export default {
       nav.classList.toggle('ocultarTodo'); */
   },
   methods: {
-    click(){
-      console.log(click)
+    GoToLink(link){
+      window.open(
+        link,
+        '_blank'
+      );
     },
      handleScroll(link) {
-       console.log(link)
        if(link){
          const ele = document.getElementById(link)
-         console.log(ele)
          if(ele){
            const target = scroll.getScrollTarget(ele)
-           console.log(ele.offsetTop, ele.scrollHeight)
            const offset = ele.offsetTop - ele.scrollHeight
            const duration = 400
            scroll.setVerticalScrollPosition(target, offset, duration)
@@ -90,9 +90,7 @@ export default {
       })
     },
     ChangeNavbar(){
-      console.log("hola")
       let nav = document.querySelector('#nav-row');
-      console.log(nav)
       nav.style.visibility="hidden";
       
     },
@@ -100,15 +98,6 @@ export default {
         let img = document.getElementById('logo-navbar');
         let navbar = document.querySelectorAll('#tab-navbar');
         let row = document.getElementById('nav-row');
-        console.log(navbar)
-        /* if(!e){
-          console.log(img,navbar);
-          this.reactivateNavbar();
-          img.classList.add('ocultarTodo');
-        }else{
-          navbar.classList.remove('ocultarTodo');
-          img.classList.remove('ocultarTodo');
-        } */
       if(e && e.position > 4){
         img.classList.remove('small-logo__disabled')
         img.classList.add('small-logo');
@@ -155,7 +144,7 @@ export default {
   /* position: absolute;
   top: 0;
   right: 33.33333%; */
-  transform: scale(0.2) translate(0, -65em);
+  transform: scale(0.2) translate(0, -58em);
   cursor: pointer;
 }
 .small-logo img{
