@@ -51,7 +51,7 @@
                 <div class="text-weight-light" style="font-size: 1.5em">
                     y consigue beneficios únicos.
                 </div>
-                <q-btn color="primary" rounded class="text-weight-light q-ml-xs q-mt-md" label="Saber más" text-color="dark"/>
+                <!-- <q-btn color="primary" rounded class="text-weight-light q-ml-xs q-mt-md" label="Saber más" text-color="dark"/> -->
             </div>
             <div class="col-4">
                 <q-img 

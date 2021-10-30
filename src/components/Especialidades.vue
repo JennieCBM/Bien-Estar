@@ -90,56 +90,56 @@
       <q-img class="marco-imagen_central" src="img\flecha1.png" />
     </div>
     <!-- Listas de especialidades 1-->
-    <div class="row bg-info q-pb-none">
-      <div class="col-3 text-h6 text-weight-light">
-        <q-list dense padding class="rounded-borders" style="padding: 40% 0 0 20%">
-          <q-item>
-              - Psiquiatría
+    <div class="row bg-info q-pb-none extra_light text-body1" style="font-size: 1.8em">
+      <div class="offset-1 col-3">
+        <q-list dense padding class="rounded-borders" style="padding: 40% 0 0 0%">
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psiquiatría
           </q-item>
-          <q-item>
-              - Psicología
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psicología
           </q-item>
-          <q-item>
-              - Psiquiatría infantil y adolescencia
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psiquiatría infantil y adolescencia
           </q-item>
-          <q-item>
-              - Psicología infantil y adolescencia
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psicología infantil y adolescencia
           </q-item>
-          <q-item>
-              - Psicología diversidad e identidad de género
-          </q-item>
-        </q-list>
-      </div>
-      <div class="col-3 ">
-        <q-list dense padding class="rounded-borders text-h6 text-weight-light" style="padding: 40% 0 0 10%; max-width: 80%">
-          <q-item>
-              - Nutrición
-          </q-item>
-          <q-item>
-              - Nutrición y bienestar integral infantil y adolescencia
-          </q-item>
-          <q-item>
-              - Nutrición y bienestar integral Mujer
-          </q-item>
-          <q-item>
-              - Nutrición y bienestar integral Deportistas
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psicología diversidad e identidad de género
           </q-item>
         </q-list>
       </div>
-      <div class="col-6">
+      <div class="col-3">
+        <q-list dense padding class="rounded-borders" style="padding: 40% 0 0 0%">
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Nutrición
+          </q-item>
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Nutrición y bienestar integral infantil y adolescencia
+          </q-item>
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Nutrición y bienestar integral Mujer
+          </q-item>
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Nutrición y bienestar integral Deportistas
+          </q-item>
+        </q-list>
+      </div>
+      <div class="col-5 q-pl-xl">
           
         <q-img
             class="q-mt-xl overflow-normal"
-            style="left:15%"
+            style=""
             src="img\Eat.jpg"
-            :ratio="16/18"
-            width="60%"
+            :ratio="11/13"
+            width="80%"
             >
               <div 
             class="absolute-top bg-positive"
             style="
-            height: 4em;
-            width: 120%;
+            height: 2em;
+            width: 105%;
             left: 20%;
             top: -5%;"
             />
@@ -147,8 +147,8 @@
       </div>
     </div>
     <!-- Listas de especialidades 2-->
-    <div class="row bg-info q-pb-xl">
-      <div class="col-6 ">          
+    <div class="row bg-info extra_light text-body1" style="font-size: 1.8em; padding-bottom: 3em;">
+      <div class="col-6">          
         <q-img
           class=" overflow-normal"
           style="left:15%; top: 0"
@@ -159,48 +159,48 @@
             <div 
             class="absolute-top bg-primary"
             style="
-            height: 4em;
+            height: 2em;
             width: 100%;
             left: -20%;
             top: -5%;"
             />
         </q-img>
       </div>
-      <div class="col-3 text-h6 text-weight-light">
-        <q-list dense padding class="rounded-borders" style="padding: 40% 0 0 20%">
-          <q-item>
-              - Reiki 
+      <div class="col-3">
+        <q-list dense padding class="rounded-borders" style="padding: 30% 0 0 0">
+          <q-item class="" style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Reiki 
           </q-item>
-          <q-item>
-              - Masajes Integrales
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Masajes Integrales
           </q-item>
-          <q-item>
-              - Flores de Bach
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Flores de Bach
           </q-item>
-          <q-item>
-              - Felicidad y Bienestar empresas
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Felicidad y Bienestar empresas
           </q-item>
-          <q-item>
-              - Talleres y charlas a medida
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Talleres y charlas a medida
           </q-item>
         </q-list>
       </div>
-      <div class="col-3 ">
-        <q-list dense padding class="rounded-borders text-h6 text-weight-light" style="padding: 40% 0 0 10%; max-width: 80%">
-          <q-item>
-              - Obesidad integral 
+      <div class="col-3">
+        <q-list dense padding class="rounded-borders" style="padding: 30% 0 0 0; ">
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Obesidad integral 
           </q-item>
-          <q-item>
-              - Mindfullness
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Mindfullness
           </q-item>
-          <q-item>
-              - Fonoaudiología
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Fonoaudiología
           </q-item>
-          <q-item>
-              - Psicopedagogía
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psicopedagogía
           </q-item>
-          <q-item>
-              - Mesoterapia
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Mesoterapia
           </q-item>
         </q-list>
       </div>
