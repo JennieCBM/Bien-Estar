@@ -8,34 +8,58 @@
         z-index: 9998">
             <q-card flat class="my-card col-3 text-center">
                 <q-card-section class="q-pt-none ">
-                    <q-btn round size="4em" icon="img:icons/001.png" />
+                    <q-img
+                        style="cursor: pointer"
+                        src="icons/integral.png"
+                        :ratio="1"
+                        width="12em"
+                        @click="openModal('integral')"
+                    />
                 </q-card-section>
                 <q-card-section>
-                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Integral" @click="openModal('integral')"/>
+                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Integral" style="pointer-events: none"/>
                 </q-card-section>
             </q-card>
             <q-card flat class="my-card col-3 text-center">
                 <q-card-section class="q-pt-none ">
-                    <q-btn round size="4em" icon="img:icons/002.png" />
+                    <q-img
+                        style="cursor: pointer"
+                        src="icons/kids.png"
+                        :ratio="1"
+                        width="12em"
+                        @click="openModal('integral')"
+                    />
                 </q-card-section>
                 <q-card-section>
-                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Kids" @click="openModal('kids')" />
+                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Kids" style="pointer-events: none"/>
                 </q-card-section>
             </q-card>
             <q-card flat class="my-card col-3 text-center">
                 <q-card-section class="q-pt-none ">
-                    <q-btn round size="4em" icon="img:icons/003.png" />
+                    <q-img
+                        style="cursor: pointer"
+                        src="icons/mujer.png"
+                        :ratio="1"
+                        width="12em"
+                        @click="openModal('integral')"
+                    />
                 </q-card-section>
                 <q-card-section>
-                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Mujer" @click="openModal('mujer')"/>
+                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Mujer" style="pointer-events: none"/>
                 </q-card-section>
             </q-card>
             <q-card flat class="my-card col-3 text-center">
                 <q-card-section class="q-pt-none ">
-                    <q-btn round size="4em" icon="img:icons/004.png" />
+                    <q-img
+                        style="cursor: pointer"
+                        src="icons/diversidad.png"
+                        :ratio="1"
+                        width="12em"
+                        @click="openModal('integral')"
+                    />
                 </q-card-section>
                 <q-card-section>
-                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Diversidad" @click="openModal('diversidad')"/>
+                    <q-btn rounded color="primary" text-color="dark" label="Bien-Estar Diversidad" style="pointer-events: none"/>
                 </q-card-section>
             </q-card>
         </div>
@@ -50,6 +74,11 @@
                 </div>
                 <div class="extra_light" style="font-size: 1.6em">
                     y consigue beneficios únicos.
+                </div>
+                <div class="text-overline text-bold q-mt-md" style="font-size: 1em; line-height: 1.5em; font-family: 'Roboto', '-apple-system', 'Helvetica Neue', Helvetica, Arial, sans-serif;" >
+                    E-MAIL: CONTACTO@BIEN-ESTAR.CL
+                    <br>
+                    TELEFONO: +56973752280
                 </div>
                 <!-- <q-btn color="primary" rounded class="extra_light q-ml-xs q-mt-md" label="Saber más" text-color="dark"/> -->
             </div>
@@ -68,7 +97,7 @@
         <q-dialog
             v-model="open"
             >
-            <q-card class="">
+            <q-card class="text-dark">
                 <q-card-section>
                     <div class="text-h5 demi-bold text-uppercase text-center">{{titulo}}</div>
                     <div v-if="subtitulo" style="font-size:1.6em" class="text-subtitle1 extra_light q-pt-md text-center">{{subtitulo}}</div>
@@ -163,5 +192,6 @@ export default {
 <style>
     .asistente{
         background: rgba(197, 158, 119,.5) !important;
+        
     }
 </style>

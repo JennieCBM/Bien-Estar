@@ -16,7 +16,7 @@
           <div class="extra_light" style="font-size: 1.3em">
             Entregar
             <span class="demi_bold">bienestar y salud integral</span> con los
-            más altos estándares de calidad, junto a especialistas calificados,
+            más altos estándares de calidad junto a especialistas calificados,
             con innovación constante en nuestro portafolio de servicios,
             <span class="demi_bold">a un precio justo.</span>
           </div>
@@ -113,7 +113,7 @@
       </div>
       <br>
       <div class="extra_light" style="font-size: 1.5em">
-          Descubre como encontrar tu  
+          Descubre cómo encontrar tu  
             <span class="demi_bold">Bien-Estar</span>
             integral 
           </div>

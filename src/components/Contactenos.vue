@@ -5,33 +5,37 @@
     >
       Medios de pago
     </div>
-    <div class="row text-center" style="margin-left: 20%; margin-right: 20%">
+    <div class="row text-center" style="margin-left: 10%; margin-right: 10%">
       <div class="col-3">
-        <q-icon name="img:icons/Efectivo.png" size="6em" />
-        <div class="text-h6 text-weight-light text-uppercase q-pa-sm">
+        <q-icon name="fas fa-money-bill-wave" color="accent" size="6em" />
+        <div class="text-h6 text-weight-light text-uppercase q-pa-sm text-accent">
           Efectivo
         </div>
       </div>
       <div class="col-3">
-        <q-icon name="img:icons/Transferencia.png" size="6em" />
-        <div class="text-h6 text-weight-light text-uppercase q-pa-sm">
+        <q-icon name="fas fas fa-desktop" color="accent" size="6em" />
+        <div class="text-h6 text-weight-light text-uppercase q-pa-sm text-accent">
           Transferencia Electronica
         </div>
       </div>
       <div class="col-3">
-        <q-icon name="img:icons/Tarjetas.png" size="6em" />
-        <div class="text-h6 text-weight-light text-uppercase q-pa-sm">
+        <q-icon name="fas fa-money-check" color="accent" size="6em" />
+        <div class="text-h6 text-weight-light text-uppercase q-pa-sm text-accent">
           Tarjetas de débito y crédito
         </div>
       </div>
       <div class="col-3">
-        <q-icon name="img:icons/Transferencia.png" size="6em" />
-        <div class="text-h6 text-weight-light text-uppercase q-pa-sm">
+        <!-- style="width: 9em; height: 6em"  -->
+        <q-icon name="img:icons/fonasa.png" color="accent" style="width: 9em; height: 6em"/>
+        <div class="text-h6 text-weight-light text-uppercase q-pa-sm text-accent">
           Convenio fonasa
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row q-mt-xl q-pt-lg">
+      <div class="col-12 text-h5 demi_bold text-center text-dark q-mb-xl text-uppercase">
+        Nos encantaría escucharte, cantáctanos aquí: 
+      </div>
       <div class="q-pa-md text-center" style="margin: 0 auto; width: 40em">
         <q-form @submit="sendEmail" @reset="onReset" class="q-gutter-md" style="font-family: 'Roboto', '-apple-system', 'Helvetica Neue', Helvetica, Arial, sans-serif;" ref="form">
           <q-input
@@ -101,7 +105,7 @@
 
         </q-form>
       </div>
-      <div class="row q-mt-xl full-width bg-primary" style="cursor: pointer">
+      <div class="row full-width bg-primary" style="cursor: pointer; margin-top: 5em">
           <div class="col-4 q-pa-none q-pl-xl " style="font-size: 1.1em">
               <div class="text-h4 text-uppercase q-mt-xl q-ml-lg">
                   Contacto
@@ -112,7 +116,9 @@
                     <q-item-section avatar>
                     <q-icon color="dark" name="location_on" size="xl"/>
                     </q-item-section>
-                    <q-item-section>Av. Luis Thayer Ojeda 166, Providencia, Región Metropolitana
+                    <q-item-section>Av. Luis Thayer Ojeda 166, Providencia, 
+                        <br>
+                      Oficina 303, Región Metropolitana
                         <br>
                         A pasos de estación Tobalaba.
                     </q-item-section>

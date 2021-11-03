@@ -53,14 +53,18 @@
             style="margin-left: 25em; margin-right: 25em"
           />
         </q-carousel-slide>
-        <q-carousel-slide name="tv" class="column no-wrap flex-center">
-          <q-icon name="live_tv" size="56px" />
-          <div class="q-mt-md text-center">test</div>
-        </q-carousel-slide>
-        <q-carousel-slide name="layers" class="column no-wrap flex-center">
+        <!-- <q-carousel-slide name="tv" class="column no-wrap flex-center">
+          <q-img 
+            src="icons/Bien_Estar_PNG-01.png"
+            :ratio="1" 
+            width="10em" 
+            style="filter: grayscale(1);"
+          />
+        </q-carousel-slide> -->
+        <!-- <q-carousel-slide name="layers" class="column no-wrap flex-center">
         </q-carousel-slide>
         <q-carousel-slide name="map" class="column no-wrap flex-center">
-        </q-carousel-slide>
+        </q-carousel-slide> -->
       </q-carousel>
     </q-banner>
 
@@ -77,10 +81,10 @@
             class="text-uppercase demi_bold text-white text-h4"
             style="line-height: 1em" 
             >
-              Conoce nuestras unidades de atencion integral
+              Conoce nuestras unidades de atención integral
             </div>
             <div class="q-mt-lg extra_light text-white" style="max-width: 80%; font-size: 1.5em">
-              Brindamos salud y bienestar integral a niñas, niños y adolecentes.
+              Brindamos salud y bienestar integral a adultos niñas, niños y adolecentes en sus diferentes momentos de la vida.
             </div>
           </div>
         </div>
@@ -93,7 +97,9 @@
     </div>
     <!-- Listas de especialidades 1-->
     <div class="row bg-info q-pb-none extra_light text-body1" style="font-size: 1.8em; line-height: 1.3em">
-      
+        <div class="col-6 text-h4 demi_bold q-mt-xl text-dark" style="position:absolute; margin-left: 3em">
+          Nuestros Servicios
+        </div>
       <div class="offset-1 col-3">
         <q-list dense padding class="rounded-borders" style="padding: 40% 0 0 0%">
           <q-item style="display:flex; flex-direction: row; align-items:center">
