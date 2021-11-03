@@ -91,6 +91,7 @@
             outlined
             type="textarea"
             class="q-pt-none q-mt-none"
+            placeholder="Darte nuestro apoyo nos pone muy feliz, cuéntanos cómo podemos ayudarte..."
             />
             <div class="full-width text-right demi_bold">
                 <q-btn 
@@ -105,7 +106,7 @@
 
         </q-form>
       </div>
-      <div class="row full-width bg-primary" style="cursor: pointer; margin-top: 5em">
+      <div class="row full-width bg-primary" style="margin-top: 5em">
           <div class="col-4 q-pa-none q-pl-xl " style="font-size: 1.1em">
               <div class="text-h4 text-uppercase q-mt-xl q-ml-lg">
                   Contacto
@@ -116,9 +117,9 @@
                     <q-item-section avatar>
                     <q-icon color="dark" name="location_on" size="xl"/>
                     </q-item-section>
-                    <q-item-section>Av. Luis Thayer Ojeda 166, Providencia, 
+                    <q-item-section>Av. Luis Thayer Ojeda 166, Oficina 303, 
                         <br>
-                      Oficina 303, Región Metropolitana
+                      Providencia, Región Metropolitana.
                         <br>
                         A pasos de estación Tobalaba.
                     </q-item-section>
@@ -137,11 +138,11 @@
                             <q-icon color="primary" name="call" size="sm"/>
                         </div>
                     </q-item-section>
-                    <q-item-section>Telefono: +56973752280</q-item-section>
+                    <q-item-section>Telefono: +56 9 7375 2280</q-item-section>
                   </q-item>                 
               </q-list>
           </div>
-          <div class="col-4 text-center">
+          <div class="col-4 text-center" >
               <q-img
                 class=""
                 style=""
@@ -162,7 +163,7 @@
                     </q-btn>
               </div>
           </div>
-          <div class="col-4" @click="GoToLink('https://www.google.com/maps/place/Av.+Luis+Thayer+Ojeda+166,+of+303,+Providencia,+Regi%C3%B3n+Metropolitana,+Chile/@-33.4186597,-70.6010493,16z/data=!4m5!3m4!1s0x9662cf6bba3ad173:0x322b37488c554b29!8m2!3d-33.4199314!4d-70.6019279')">
+          <div class="col-4" style="cursor: pointer; " @click="GoToLink('https://www.google.com/maps/place/Av.+Luis+Thayer+Ojeda+166,+of+303,+Providencia,+Regi%C3%B3n+Metropolitana,+Chile/@-33.4186597,-70.6010493,16z/data=!4m5!3m4!1s0x9662cf6bba3ad173:0x322b37488c554b29!8m2!3d-33.4199314!4d-70.6019279')">
               <q-img
                 class=""
                 style=""

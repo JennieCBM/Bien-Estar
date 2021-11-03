@@ -4,7 +4,7 @@
         <div class="row full-width bg-primary" style="height: 100%">
           <q-toolbar :class="showEnlaces ? 'justify-end' : 'justify-between'" style="margin-right: 10em; margin-left: 10em">
           <div v-if="!showEnlaces" style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" class="">
-            <q-btn flat color="dark" @click="GoHome">
+            <q-btn flat rounded class="bg-white" color="dark" @click="GoHome" id="backhome">
               Volver a Home
             </q-btn>
           </div>
@@ -14,6 +14,8 @@
                 spinner-color="white"
                 :ratio="1" 
                 width="5em"
+                @click="GoHome"
+                style="cursor: pointer"
               />
           </div>
           <div>
@@ -32,11 +34,11 @@
 
 
         <div v-if="showEnlaces" class="row text-body1 text-dark" id="nav-row" style="display: flex; flex-direction: row; justify-content: space-around;">
-            <div class=" text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('conocenos')">
-              <span class="q-pl-md q-pr-md">Conócenos</span>
+            <div class=" text-center text-uppercase q-pt-lg " id="tab-navbar" >
+              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScroll('conocenos')">Conócenos</q-btn>
             </div>
-            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('especialidades')">
-              <span class="q-pl-md q-pr-md">Especialidades</span>
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" >
+              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScroll('especialidades')">Especialidades</q-btn>
             </div>
             <div class="col-4 q-pr-xl q-pl-xl" id="logo-navbar" >
               <q-img
@@ -46,10 +48,10 @@
               />
             </div>
             <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('profesionales')">
-              <span class="q-pl-md q-pr-md">Profesionales</span>
+              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScroll('profesionales')">Profesionales</q-btn>
             </div>
             <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('contactenos')">
-              <span class="q-pl-md q-pr-md">Sucursales</span>
+              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScroll('Sucursales')">Sucursales</q-btn> 
             </div>
         </div>
         
@@ -209,8 +211,8 @@ export default {
   cursor: pointer;  
 } */
 .hidden-navbar{
-  transition: .5s;
-  transform: scale(0) translate(0,-100em);
+  transition: .1s;
+  opacity: 0;
   pointer-events: none;
 }
 .ocultarTodo{
@@ -225,8 +227,6 @@ export default {
 #tab-navbar span{
   cursor: pointer;
 }
-#tab-navbar span:hover{
-  background: rgba(175, 175, 175, 0.1); 
-}
+
 
 </style>
