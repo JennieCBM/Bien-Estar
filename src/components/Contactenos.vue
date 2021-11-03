@@ -145,7 +145,7 @@
               <q-img
                 class=""
                 style=""
-                src="img\Bien_Estar_PNG-01.png"
+                src="icons\Bien_Estar_PNG-01.png"
                 :ratio="16/8"
                 height="80%"
                 width="60%"
