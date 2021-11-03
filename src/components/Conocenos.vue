@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <!-- Seccion A -->
-    <div class="conocenos " >
+    <div class="conocenos" >
       <q-card
         class="my-card bg-transparent text-dark conocenos_mensaje no-shadow"
       >
@@ -31,7 +31,7 @@
 
     <!-- Seccion B -->
     <!-- b-1 -->
-    <div style="background: transparent;" id="conocenos">
+    <div style="background: transparent;" >
       <div class="row text-center center-align">
         <div class="col-7 q-pa-none">
           <q-img
@@ -126,17 +126,10 @@ import {Loading} from "quasar";
 export default {
   name: "Conocenos",
   mounted(){
-    let nav = document.querySelector('#nav-row');
-      nav.style.visibility="visible";
   },
   methods:{
     async goToAbout(){
-      return;
- /*      Loading.show(); */
-      await this.$emit('AboutLayout', ()=>this.$router.push({name:'about'}));
-      
-/*       Loading.hide(); */
-
+      this.$emit('AboutLayout');
     }
   }
 };

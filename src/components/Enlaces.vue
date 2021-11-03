@@ -27,7 +27,7 @@
                         src="icons/kids.png"
                         :ratio="1"
                         width="12em"
-                        @click="openModal('integral')"
+                        @click="openModal('kids')"
                     />
                 </q-card-section>
                 <q-card-section>
@@ -41,7 +41,7 @@
                         src="icons/mujer.png"
                         :ratio="1"
                         width="12em"
-                        @click="openModal('integral')"
+                        @click="openModal('mujer')"
                     />
                 </q-card-section>
                 <q-card-section>
@@ -55,7 +55,7 @@
                         src="icons/diversidad.png"
                         :ratio="1"
                         width="12em"
-                        @click="openModal('integral')"
+                        @click="openModal('diversidad')"
                     />
                 </q-card-section>
                 <q-card-section>

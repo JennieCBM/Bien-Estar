@@ -34,7 +34,7 @@
     </div>
     <div class="row q-mt-xl q-pt-lg">
       <div class="col-12 text-h5 demi_bold text-center text-dark q-mb-xl text-uppercase">
-        Nos encantaría escucharte, cantáctanos aquí: 
+        Nos encantaría escucharte, contáctanos aquí: 
       </div>
       <div class="q-pa-md text-center" style="margin: 0 auto; width: 40em">
         <q-form @submit="sendEmail" @reset="onReset" class="q-gutter-md" style="font-family: 'Roboto', '-apple-system', 'Helvetica Neue', Helvetica, Arial, sans-serif;" ref="form">

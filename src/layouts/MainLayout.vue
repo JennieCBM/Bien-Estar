@@ -2,7 +2,21 @@
   <q-layout view="lHh Lpr lFf" class="rounded-borders demi_bold" @scroll="hideNavBar">
       <q-header elevated class="bg-transparent" style="height: 5em">
         <div class="row full-width bg-primary" style="height: 100%">
-          <q-toolbar class="justify-end" style="margin-right: 10em">
+          <q-toolbar :class="showEnlaces ? 'justify-end' : 'justify-between'" style="margin-right: 10em; margin-left: 10em">
+          <div v-if="!showEnlaces" style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" class="">
+            <q-btn flat color="dark" @click="GoHome">
+              Volver a Home
+            </q-btn>
+          </div>
+          <div v-if="!showEnlaces">
+              <q-img
+                src="../../public/icons/Bien_Estar_PNG-01.png"
+                spinner-color="white"
+                :ratio="1" 
+                width="5em"
+              />
+          </div>
+          <div>
             <q-btn class="bg-white q-ma-sm" flat round dense color="white" @click="GoToLink('https://www.facebook.com/Centro-Integral-Bien-Estar-100957679021251')">
               <q-icon name="fab fa-facebook-f" class="text-dark"></q-icon>
             </q-btn>
@@ -12,11 +26,12 @@
             <q-btn class="bg-white q-ma-sm" flat round dense color="white" @click="GoToLink('https://api.whatsapp.com/send?phone=56973752280&text=%C2%A1Hola!%20')">
               <q-icon name="fab fa-whatsapp" class="text-dark"></q-icon>
             </q-btn>
+          </div>
           </q-toolbar>
         </div>
 
 
-        <div class="row text-body1 text-dark" id="nav-row" style="display: flex; flex-direction: row; justify-content: space-around;">
+        <div v-if="showEnlaces" class="row text-body1 text-dark" id="nav-row" style="display: flex; flex-direction: row; justify-content: space-around;">
             <div class=" text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('conocenos')">
               <span class="q-pl-md q-pr-md">Conócenos</span>
             </div>
@@ -33,14 +48,15 @@
             <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('profesionales')">
               <span class="q-pl-md q-pr-md">Profesionales</span>
             </div>
-            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('sucursales')">
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('contactenos')">
               <span class="q-pl-md q-pr-md">Sucursales</span>
             </div>
         </div>
         
       </q-header>     
     <q-page-container>
-      <router-view @AboutLayout="ChangeNavbar"/>
+      <router-view 
+      @AboutLayout="ChangeNavbar"/>
     </q-page-container>
   </q-layout>
 </template>
@@ -53,15 +69,32 @@ export default {
   data(){
     return{
       tab: 'conocenos',
+      showEnlaces: true
     }
   },
   components: {
   },
-  mounted(){
-    /* let nav = document.querySelector('#nav-row');
-      nav.classList.toggle('ocultarTodo'); */
+  mounted(){    
+      if(this.$route.name == 'about' || this.$route.name == 'profesionales'){
+        this.showEnlaces = false;
+      }else{
+        this.showEnlaces = true;
+      }
   },
+  watch:{
+    $route (to, from){
+        console.log(to, from)
+        if(to.name == 'about' || to.name == 'profesionales'){
+          this.showEnlaces = false;
+        }else{
+          this.showEnlaces = true;
+        }
+    }
+},
   methods: {
+    GoHome(){
+      this.$router.push({name:'home'})
+    },
     GoToLink(link){
       window.open(
         link,
@@ -70,30 +103,33 @@ export default {
     },
      handleScroll(link) {
        if(link){
-         const el = document.getElementById(link)
+         let el = document.getElementById(link)
          console.log(el)
-         if(el){
-           const target = getScrollTarget(el)
+          if(link && link == "profesionales"){
+            this.$router.push({name:"profesionales"});
+            return;
+          }
+          if(link && link == "contactenos" && el){
+            el= document.querySelector('body')
+            const target = getScrollTarget(el)
            console.log("target", target)
-           const offset = el.offsetTop - el.scrollHeight;
+           const offset = el.offsetHeight;
            console.log("offset",offset)
            const duration = 800;
 
            scroll.setVerticalScrollPosition(target, offset, duration)
+           return;
+          }      
+         if(el){
+           const target = getScrollTarget(el)
+           console.log("target", target)
+           const offset = el.offsetTop;
+           console.log("offset",typeof el)
+           const duration = 800;
+           scroll.setVerticalScrollPosition(target, offset, duration)
          }else{
            return;
          }
-         /* if(el){
-           let scrollEl = el.closest('.scroll') 
-           console.log("scrollel",scroll)
-           const target = getScrollTarget(el)
-           const offset = el.offsetTop - scrollEl.offsetTop
-           const duration = 800
-           scroll.setVerticalScrollPosition(target, offset, duration)
-           scroll.animVerticalScrollTo()
-         }else{
-           return;
-         } */
        }
     },
     reactivateNavbar(){
@@ -105,11 +141,13 @@ export default {
       })
     },
     ChangeNavbar(){
-      let nav = document.querySelector('#nav-row');
-      nav.style.visibility="hidden";
+      this.showEnlaces = false;
+      this.$router.push({name:'about'})
       
     },
     hideNavBar(e){
+      console.log(this.showEnlaces)
+      if(this.showEnlaces){
         let img = document.getElementById('logo-navbar');
         let navbar = document.querySelectorAll('#tab-navbar');
         let row = document.getElementById('nav-row');
@@ -133,6 +171,7 @@ export default {
         img.removeEventListener('click',this.reactivateNavbar);
       }
       //e.position para saber donde estoy
+      }
     }
   }
 }
