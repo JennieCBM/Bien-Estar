@@ -195,10 +195,10 @@ export default {
       Loading.show();
       emailjs
         .sendForm(
-          "Bien-Estar",
-          "template_ia4gxlj",
+          "service_bienestar",
+          "template_lp5ksrv",
           e.target,
-          "user_qUvrkke4h82ZvemUCxoib"
+          "user_PKrqjKHYC3BXmxUauEY6Y"
         )
         .then(
           (result) => {

@@ -83,7 +83,6 @@ export default {
   },
   watch:{
     $route (to, from){
-        console.log(to, from)
         if(to.name == 'about' || to.name == 'profesionales'){
           this.showEnlaces = false;
         }else{
@@ -104,7 +103,6 @@ export default {
      handleScroll(link) {
        if(link){
          let el = document.getElementById(link)
-         console.log(el)
           if(link && link == "profesionales"){
             this.$router.push({name:"profesionales"});
             return;
@@ -112,9 +110,7 @@ export default {
           if(link && link == "contactenos" && el){
             el= document.querySelector('body')
             const target = getScrollTarget(el)
-           console.log("target", target)
            const offset = el.offsetHeight;
-           console.log("offset",offset)
            const duration = 800;
 
            scroll.setVerticalScrollPosition(target, offset, duration)
@@ -122,9 +118,7 @@ export default {
           }      
          if(el){
            const target = getScrollTarget(el)
-           console.log("target", target)
            const offset = el.offsetTop;
-           console.log("offset",typeof el)
            const duration = 800;
            scroll.setVerticalScrollPosition(target, offset, duration)
          }else{
@@ -146,7 +140,6 @@ export default {
       
     },
     hideNavBar(e){
-      console.log(this.showEnlaces)
       if(this.showEnlaces){
         let img = document.getElementById('logo-navbar');
         let navbar = document.querySelectorAll('#tab-navbar');
