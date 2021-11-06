@@ -1,6 +1,8 @@
 <template>
-  <q-page>    
+  <q-page>
+    <!-- Carousel Version desktop -->    
     <q-banner
+    v-if="!$q.platform.is.mobile"
       class="text-center text-dark text-uppercase center-align"
       style="height: 23em; background: #eeeef6"
     >
@@ -67,8 +69,56 @@
       </q-carousel>
     </q-banner>
 
-    <!-- Imagen central - equipo medico -->
-    <div class="row imagen_central q-pa-none">
+
+    <!-- Carousel Version mobile  -->
+    <div v-if="$q.platform.is.mobile" class="text-center text-dark" style="height: 15em; background: #eeeef6">
+      <q-carousel
+        arrows
+        control-color="dark"
+        animated
+        v-model="slide"
+        class="bg-transparent q-pa-none q-ma-none"
+        height="15em"
+        infinite
+        :autoplay="false"
+        transition-prev="slide-right"
+        transition-next="slide-left"
+      >
+        <q-carousel-slide name="style" class="column no-wrap flex-center">
+          <div class="" style="max-width: 80%">
+            <div class="text-h4 demi_bold text-center">Paciente María Pía</div>
+            <br />
+            <div class="text-uppercase demi_bold" style="font-size: 1.5em">
+              Ahorro / precio justo
+            </div>
+            <div class="extra_light" style="font-size: 1.5em;">
+              ¡No pagues de más! 
+              <br>
+              paga lo justo por tu
+              <span class="demi_bold">Bien-Estar!</span>
+            </div>
+          </div>
+        </q-carousel-slide>
+        
+        <!-- Nota: cada una de estas secciones (slide) es una pagina del carousel sugerencia: mantener el patrón-->
+
+        <!-- <q-carousel-slide name="style" class="column no-wrap flex-center">
+          <div class="" style="max-width: 80%">
+            <div class="text-h4 demi_bold text-center">Paciente María Pía</div>
+            <br />
+            <div class="text-uppercase demi_bold" style="font-size: 1.5em">
+              Ahorro / precio justo
+            </div>
+            <div class="extra_light" style="font-size: 1.5em;">
+              ¡No pagues de más! paga lo justo por tu
+              <span class="demi_bold">Bien-Estar!</span>
+            </div>
+          </div>
+        </q-carousel-slide> -->
+      </q-carousel>
+    </div>
+    <!-- Imagen central - equipo medico - desktop -->
+    <div v-if="!$q.platform.is.mobile" class="row imagen_central q-pa-none">
       <div class="offset-6 col-6">
         <q-banner class="bg-primary q-mt-xl q-mr-xl " style="" />
         <div>

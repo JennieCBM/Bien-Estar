@@ -2,7 +2,8 @@
   <q-layout view="lHh Lpr lFf" class="rounded-borders demi_bold" @scroll="hideNavBar">
       <q-header elevated class="bg-transparent" style="height: 5em">
         <div class="row full-width bg-primary" style="height: 100%">
-          <q-toolbar :class="showEnlaces ? 'justify-end' : 'justify-between'" style="margin-right: 10em; margin-left: 10em">
+          <!-- desktop -->
+          <q-toolbar v-if="!$q.platform.is.mobile" :class="showEnlaces ? 'justify-end' : 'justify-between'" style="margin-right: 10em; margin-left: 10em">
           <div v-if="!showEnlaces" style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" class="">
             <q-btn flat rounded class="bg-white" color="dark" @click="GoHome" id="backhome">
               Volver a Home
@@ -30,10 +31,46 @@
             </q-btn>
           </div>
           </q-toolbar>
+          <!-- mobile -->
+          <q-toolbar v-if="$q.platform.is.mobile" class="justify-center">
+            <!-- only mobile && home -->
+            <div v-if="$q.platform.is.mobile && showEnlaces">
+              <q-btn 
+              flat 
+              @click="drawerLeft = !drawerLeft" 
+              text-color="dark" 
+              round  
+              icon="menu"
+              class="bg-white"
+              style="position: absolute; left: .5em; bottom: 1em"/>
+            </div>
+            <!-- mobile && external routes -->
+            <div v-if="!showEnlaces">
+              <q-btn 
+              flat 
+              round 
+              class="bg-white" 
+              color="dark" 
+              @click="GoHome" 
+              id="backhome" 
+              icon="fas fa-home"
+              style="position: absolute; left: .5em; bottom: 1em"/>
+            </div>
+            <!-- mobile && all-->
+            <div >
+              <q-btn class="bg-white q-ma-sm" flat round dense color="white" @click="GoToLink('https://www.facebook.com/Centro-Integral-Bien-Estar-100957679021251')">
+                <q-icon name="fab fa-facebook-f" class="text-dark"></q-icon>
+              </q-btn>
+              <q-btn class="bg-white q-ma-sm" flat round dense color="white" @click="GoToLink('https://www.instagram.com/centrointegral.bienestar/')">
+                <q-icon name="fab fa-instagram" class="text-dark"></q-icon>
+              </q-btn>
+              <q-btn class="bg-white q-ma-sm" flat round dense color="white" @click="GoToLink('https://api.whatsapp.com/send?phone=56973752280&text=%C2%A1Hola!%20')">
+                <q-icon name="fab fa-whatsapp" class="text-dark"></q-icon>
+              </q-btn>
+            </div>
+          </q-toolbar>
         </div>
-
-
-        <div v-if="showEnlaces" class="row text-body1 text-dark" id="nav-row" style="display: flex; flex-direction: row; justify-content: space-around;">
+        <div v-if="showEnlaces && !$q.platform.is.mobile" class="row text-body1 text-dark" id="nav-row" style="display: flex; flex-direction: row; justify-content: space-around;">
             <div class=" text-center text-uppercase q-pt-lg " id="tab-navbar" >
               <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScroll('conocenos')">Conócenos</q-btn>
             </div>
@@ -47,15 +84,42 @@
                 :ratio="1" 
               />
             </div>
-            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('profesionales')">
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" >
               <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScroll('profesionales')">Profesionales</q-btn>
             </div>
-            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" @click="handleScroll('contactenos')">
-              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScroll('Sucursales')">Sucursales</q-btn> 
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" >
+              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScroll('contactenos')">Sucursales</q-btn> 
             </div>
         </div>
         
-      </q-header>     
+      </q-header> 
+      <!-- only mobile && home -->
+      <q-drawer
+        v-model="drawerLeft"               
+        elevated
+        class="bg-white text-dark "
+        style="max-width: 80%"
+      > 
+      <q-scroll-area class="fit">
+          <div class="q-pa-sm">
+            <div class=" text-center text-uppercase q-pt-lg demi_bold" id="tab-navbar" >
+              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScrollNavbar('conocenos')">Conócenos</q-btn>
+            </div>
+
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" >
+              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScrollNavbar('especialidades')">Especialidades</q-btn>
+            </div>
+
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar">
+              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScrollNavbar('profesionales')">Profesionales</q-btn>
+            </div>
+
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar">
+              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScrollNavbar('contactenos')">Sucursales</q-btn> 
+            </div>
+          </div>
+        </q-scroll-area>
+      </q-drawer>   
     <q-page-container>
       <router-view 
       @AboutLayout="ChangeNavbar"/>
@@ -71,7 +135,8 @@ export default {
   data(){
     return{
       tab: 'conocenos',
-      showEnlaces: true
+      showEnlaces: true,
+      drawerLeft: false
     }
   },
   components: {
@@ -128,13 +193,20 @@ export default {
          }
        }
     },
+    handleScrollNavbar(link){
+      this.drawerLeft=false;
+      this.handleScroll(link);
+    },
     reactivateNavbar(){
       let navbar = document.querySelectorAll('#tab-navbar');
       let row = document.getElementById('nav-row');
-      row.classList.toggle('changesize_navbar');
-      navbar.forEach(tab=>{
-        tab.classList.toggle('hidden-navbar');
-      })
+      if(navbar && row){
+        row.classList.toggle('changesize_navbar');
+        navbar.forEach(tab=>{
+          tab.classList.toggle('hidden-navbar');
+        })
+      }
+      return;
     },
     ChangeNavbar(){
       this.showEnlaces = false;
@@ -146,25 +218,27 @@ export default {
         let img = document.getElementById('logo-navbar');
         let navbar = document.querySelectorAll('#tab-navbar');
         let row = document.getElementById('nav-row');
-      if(e && e.position > 4){
-        img.classList.remove('small-logo__disabled')
-        img.classList.add('small-logo');
-        navbar.forEach(tab =>{
-          tab.classList.add('hidden-navbar')
-        })
-        row.classList.add('changesize_navbar')
-        img.addEventListener('click', this.reactivateNavbar)
-      }
-      if(e && e.position < 3){
-        img.classList.remove('small-logo')
-        img.classList.add('small-logo__disabled')
-        //agregar a click de img
-        navbar.forEach(tab => {
-          tab.classList.remove('hidden-navbar');
-        });
-        row.classList.remove('changesize_navbar')
-        img.removeEventListener('click',this.reactivateNavbar);
-      }
+        if(img && navbar && row){
+          if(e && e.position > 4){
+            img.classList.remove('small-logo__disabled')
+            img.classList.add('small-logo');
+            navbar.forEach(tab =>{
+              tab.classList.add('hidden-navbar')
+            })
+            row.classList.add('changesize_navbar')
+            img.addEventListener('click', this.reactivateNavbar)
+          }
+          if(e && e.position < 3){
+            img.classList.remove('small-logo')
+            img.classList.add('small-logo__disabled')
+            //agregar a click de img
+            navbar.forEach(tab => {
+              tab.classList.remove('hidden-navbar');
+            });
+            row.classList.remove('changesize_navbar')
+            img.removeEventListener('click',this.reactivateNavbar);
+          }
+        }
       //e.position para saber donde estoy
       }
     }
