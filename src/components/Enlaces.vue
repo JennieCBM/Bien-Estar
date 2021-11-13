@@ -1,6 +1,7 @@
 <template>
-    <q-page class="bg-white">
-        <div class="row q-pa-xl" 
+    <q-page class="bg-white" :class="$q.platform.is.mobile ? 'page-mobile' : ''">
+        <!-- Secciones botones circulares modal desktop -->
+        <div v-if="!$q.platform.is.mobile" class="row q-pa-xl" 
         style="
         display: flex; 
         flex-direction: row;
@@ -64,7 +65,7 @@
             </q-card>
         </div>
         <!-- Convenios -->
-        <div class="row bg-secondary text-dark " style="">
+        <div v-if="!$q.platform.is.mobile" class="row bg-secondary text-dark " style="">
             <div class="offset-2 col-5 q-pt-xl">
                 <div class="text-h4 text-uppercase demi-bold ">
                     Convenios
@@ -94,6 +95,76 @@
             </div>
             
         </div>
+        
+        <!-- Secciones botones circulares modal mobile -->
+        <div v-if="$q.platform.is.mobile" class="row q-pa-xl" 
+        style="
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-around
+        z-index: 9998">
+        <div class="col-6">
+            <q-card flat class="my-card col-3 text-center">
+                <q-card-section class="q-pt-none ">
+                    <q-img
+                        style="cursor: pointer"
+                        src="icons/integral.png"
+                        :ratio="1"
+                        width="12em"
+                        @click="openModal('integral')"
+                    />
+                </q-card-section>
+                <q-card-section>
+                    <div class="bg-primary demi_bold text-center text-dark text-body1" style="border-radius: 2em">Bien-Estar Integral</div>
+                </q-card-section>
+            </q-card>
+            <q-card flat class="my-card col-3 text-center">
+                <q-card-section class="q-pt-none ">
+                    <q-img
+                        style="cursor: pointer"
+                        src="icons/kids.png"
+                        :ratio="1"
+                        width="12em"
+                        @click="openModal('kids')"
+                    />
+                </q-card-section>
+                <q-card-section>
+                    <div class="bg-primary demi_bold text-center text-dark text-body1" style="border-radius: 2em">Bien-Estar Kids</div>
+                </q-card-section>
+            </q-card>
+        </div>
+        <div class="col-6">
+            <q-card flat class="my-card col-3 text-center">
+                <q-card-section class="q-pt-none ">
+                    <q-img
+                        style="cursor: pointer"
+                        src="icons/mujer.png"
+                        :ratio="1"
+                        width="12em"
+                        @click="openModal('mujer')"
+                    />
+                </q-card-section>
+                <q-card-section>
+                    <div class="bg-primary demi_bold text-center text-dark text-body1" style="border-radius: 2em">Bien-Estar Mujer</div>
+                </q-card-section>
+            </q-card>
+            <q-card flat class="my-card col-3 text-center">
+                <q-card-section class="q-pt-none ">
+                    <q-img
+                        style="cursor: pointer"
+                        src="icons/diversidad.png"
+                        :ratio="1"
+                        width="12em"
+                        @click="openModal('diversidad')"
+                    />
+                </q-card-section>
+                <q-card-section>
+                    <div class="bg-primary demi_bold text-center text-dark text-body1" style="border-radius: 2em">Bien-Estar Diversidad</div>
+                </q-card-section>
+            </q-card>
+        </div>
+        </div>
+        <!-- modal generico -->
         <q-dialog
             v-model="open"
             >

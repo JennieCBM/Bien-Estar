@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page :class="$q.platform.is.mobile ? 'page-mobile' : ''">
     <!-- Carousel Version desktop -->    
     <q-banner
     v-if="!$q.platform.is.mobile"
@@ -138,11 +138,15 @@
           </div>
         </div>
       </div>
-      
-
-      <div class="marco-imagen_central" />
-      
+      <div class="marco-imagen_central" />      
       <q-img class="marco-imagen_central" src="img\flecha1.png" />
+    </div>
+    <div v-if="$q.platform.is.mobile" class="bg-info">
+      <q-img
+        src="img\WEB-08.png"
+        :ratio="16/10"
+        width="100%"
+        />
     </div>
   </q-page>
 </template>
@@ -167,6 +171,12 @@ export default {
   height: 50em;
   position: relative;
 }
+.imagen_central-mobile {
+  background-image: url("../../public/img/Imagen_central_mobile.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 50em;
+}
 .marco-imagen_central {
   width: 100vw;
   height: auto;
@@ -177,5 +187,8 @@ export default {
 }
 .overflow-normal{
   overflow: initial !important;
+}
+.page-mobile{
+  min-height: auto !important;
 }
 </style>

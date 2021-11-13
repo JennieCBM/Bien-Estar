@@ -231,7 +231,6 @@ export default {
           if(e && e.position < 3){
             img.classList.remove('small-logo')
             img.classList.add('small-logo__disabled')
-            //agregar a click de img
             navbar.forEach(tab => {
               tab.classList.remove('hidden-navbar');
             });
