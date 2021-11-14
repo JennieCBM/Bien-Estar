@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-accent col-4">
                         <!-- Foto aca -->
@@ -45,7 +45,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-accent col-4">
                         <!-- Foto aca -->
@@ -80,7 +80,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-accent col-4">
                         <!-- Foto aca -->
@@ -166,7 +166,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-accent col-4">
                         <!-- Foto aca -->
@@ -189,7 +189,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-primary col-4" >
                         <!-- Foto aca -->
@@ -212,7 +212,7 @@
             </div>
             
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-primary col-4">
                         <!-- Foto aca -->
@@ -235,7 +235,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-accent col-4">
                         <!-- Foto aca -->
@@ -258,7 +258,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-accent col-4">
                         <!-- Foto aca -->
@@ -281,7 +281,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-primary col-4">
                         <!-- Foto aca -->
@@ -308,7 +308,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-primary col-4">
                         <!-- Foto aca -->
@@ -331,7 +331,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-accent col-4">
                         <!-- Foto aca -->
@@ -354,7 +354,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-accent col-4">
                         <!-- Foto aca -->
@@ -384,7 +384,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-accent col-4">
                         <!-- Foto aca -->
@@ -412,7 +412,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <q-card class="my-card q-pa-xl full-width" flat >
+                <q-card class="my-card-p q-pa-xl full-width" flat >
                 <q-card-section class="my-card" :horizontal="$q.platform.is.desktop">
                     <q-card-section class="bg-accent col-4">
                         <!-- Foto aca -->
@@ -461,7 +461,7 @@ export default {
 }
 </script>
 <style>
-.my-card{
+.my-card-p{
     height: 35em;
 }
 .my-card-extra-large{
