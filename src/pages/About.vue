@@ -48,14 +48,15 @@
         </div>
 
         <!-- mobile -->
-        <div v-if="$q.platform.is.mobile" class="section_one q-pa-xl text-dark">
-            <div class="text-h4 demi_bold text-uppercase text-center q-pb-xl" style="max-width: 50%;">
-                ¿Qué es el bienestar y salud integral?
-            </div>
+        <div v-if="$q.platform.is.mobile" class="text-dark">
+            <q-img 
+            src="img/mujer_brazos-03.png"
+            width="100%"
+            />
         </div>
 
-        <div v-if="$q.platform.is.mobile">
-            <q-card flat class="my-card extra_light q-pa-sm q-mb-xl bg-info text-justify" style="max-width: 90%; margin: 0 auto;font-size: 1.5em">
+        <div v-if="$q.platform.is.mobile" class="q-mt-lg">
+            <q-card flat class="my-card extra_light q-pa-sm q-mb-xl  bg-info text-justify text-dark" style="max-width: 90%; margin: 0 auto;font-size: 1.5em">
                 <q-card-section>
                     <span class="demi_bold">Bien-Estar</span> integral es un concepto relativo al buen estado de personas o colectivos.              
                 </q-card-section>

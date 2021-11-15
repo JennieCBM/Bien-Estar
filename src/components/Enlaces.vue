@@ -110,12 +110,12 @@
                         style="cursor: pointer"
                         src="icons/integral.png"
                         :ratio="1"
-                        width="12em"
+                        width="100%"
                         @click="openModal('integral')"
                     />
                 </q-card-section>
                 <q-card-section>
-                    <div class="bg-primary demi_bold text-center text-dark text-body1" style="border-radius: 2em">Bien-Estar Integral</div>
+                    <div class="bg-primary demi_bold text-center text-dark responsive-md-text flex flex-center" style="min-height: 2em; border-radius: 2em">Bien-Estar Integral</div>
                 </q-card-section>
             </q-card>
             <q-card flat class="my-card col-3 text-center">
@@ -124,12 +124,12 @@
                         style="cursor: pointer"
                         src="icons/kids.png"
                         :ratio="1"
-                        width="12em"
+                        width="100%"
                         @click="openModal('kids')"
                     />
                 </q-card-section>
                 <q-card-section>
-                    <div class="bg-primary demi_bold text-center text-dark text-body1" style="border-radius: 2em">Bien-Estar Kids</div>
+                    <div class="bg-primary demi_bold text-center text-dark responsive-md-text flex flex-center" style="min-height: 2em; border-radius: 2em">Bien-Estar Kids</div>
                 </q-card-section>
             </q-card>
         </div>
@@ -140,12 +140,12 @@
                         style="cursor: pointer"
                         src="icons/mujer.png"
                         :ratio="1"
-                        width="12em"
+                        width="100%"
                         @click="openModal('mujer')"
                     />
                 </q-card-section>
                 <q-card-section>
-                    <div class="bg-primary demi_bold text-center text-dark text-body1" style="border-radius: 2em">Bien-Estar Mujer</div>
+                    <div class="bg-primary demi_bold text-center text-dark responsive-md-text flex flex-center" style="min-height: 2em; border-radius: 2em">Bien-Estar Mujer</div>
                 </q-card-section>
             </q-card>
             <q-card flat class="my-card col-3 text-center">
@@ -154,12 +154,12 @@
                         style="cursor: pointer"
                         src="icons/diversidad.png"
                         :ratio="1"
-                        width="12em"
+                        width="100%"
                         @click="openModal('diversidad')"
                     />
                 </q-card-section>
                 <q-card-section>
-                    <div class="bg-primary demi_bold text-center text-dark text-body1" style="border-radius: 2em">Bien-Estar Diversidad</div>
+                    <div class="bg-primary demi_bold text-center text-dark responsive-md-text flex flex-center" style="min-height: 2em; border-radius: 2em">Bien-Estar Diversidad</div>
                 </q-card-section>
             </q-card>
         </div>

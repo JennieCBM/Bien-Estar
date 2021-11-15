@@ -71,7 +71,7 @@
 
 
     <!-- Carousel Version mobile  -->
-    <div v-if="$q.platform.is.mobile" class="text-center text-dark" style="height: 15em; background: #eeeef6">
+    <div v-if="$q.platform.is.mobile" class="text-center text-dark q-pt-lg q-pb-lg" style="background: #eeeef6">
       <q-carousel
         arrows
         control-color="dark"
@@ -88,7 +88,7 @@
           <div class="" style="max-width: 80%">
             <div class="text-h4 demi_bold text-center">Paciente María Pía</div>
             <br />
-            <div class="text-uppercase demi_bold" style="font-size: 1.5em">
+            <div class="text-uppercase demi_bold text-h6" style="">
               Ahorro / precio justo
             </div>
             <div class="extra_light" style="font-size: 1.5em;">
@@ -117,7 +117,7 @@
         </q-carousel-slide> -->
       </q-carousel>
     </div>
-    <!-- Imagen central - equipo medico - desktop -->
+    <!-- Imagen central - desktop -->
     <div v-if="!$q.platform.is.mobile" class="row imagen_central q-pa-none">
       <div class="offset-6 col-6">
         <q-banner class="bg-primary q-mt-xl q-mr-xl " style="" />
@@ -141,6 +141,7 @@
       <div class="marco-imagen_central" />      
       <q-img class="marco-imagen_central" src="img\flecha1.png" />
     </div>
+    <!-- Imagen central - mobile -->
     <div v-if="$q.platform.is.mobile" class="bg-info">
       <q-img
         src="img\WEB-08.png"

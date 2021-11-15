@@ -257,12 +257,14 @@
               <div class="col-12 text-center text-h4 text-uppercase q-mt-lg">
                   Contacto
               </div>
-          <div class="col-6 q-pa-none " style="">
+          <div class="col-12 q-pr-lg q-pl-lg flex flex-center" style="">
               <!-- lista -->
-              <q-list dense padding class="rounded-borders text-uppercase q-mb-lg" style="font-family: 'Roboto', '-apple-system', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+              <q-list dense padding class="rounded-borders text-uppercase " style="font-family: 'Roboto', '-apple-system', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
                   <q-item class="" style="padding-left: none !important">
                     <q-item-section avatar>
-                    <q-icon color="dark" name="location_on" size="xl"/>
+                       <div class="bg-dark q-pa-xs q-ml-sm" style="border-radius: 50%">
+                            <q-icon color="primary" name="location_on" size="xs"/>
+                        </div>
                     </q-item-section>
                     <q-item-section>Av. Luis Thayer Ojeda 166, Oficina 303, 
                         <br>
@@ -274,7 +276,7 @@
                   <q-item class="q-mt-sm">
                     <q-item-section avatar>
                         <div class="bg-dark q-pa-xs q-ml-sm" style="border-radius: 50%">
-                            <q-icon color="primary" name="mail_outline" size="sm"/>
+                            <q-icon color="primary" name="mail_outline" size="xs"/>
                         </div>
                     </q-item-section>
                     <q-item-section>E-mail: contacto@bien-estar.cl </q-item-section>
@@ -282,25 +284,18 @@
                   <q-item class="q-mt-md">
                     <q-item-section avatar>
                         <div class="bg-dark q-pa-xs q-ml-sm" style="border-radius: 50%">
-                            <q-icon color="primary" name="call" size="sm"/>
+                            <q-icon color="primary" name="call" size="xs"/>
                         </div>
                     </q-item-section>
                     <q-item-section>Telefono: +56 9 7375 2280</q-item-section>
                   </q-item>                 
               </q-list>
           </div>
-          <div class="col-6 text-center" >
-              <q-img
-                class=""
-                style=""
-                src="icons\Bien_Estar_PNG-01.png"
-                :ratio="16/16"
-              />              
-          </div>
+          
       </div>
 
-      <div class="row bg-primary full-width demi_bold q-pb-md">
-        <div class="col-6 text-center">
+      <div v-if="$q.platform.is.mobile" class="row bg-primary full-width demi_bold q-pb-md" style="display: flex; flex-direction:row; align-items:center; justify-content:center">
+        <div class="col-4 text-center">
           <q-btn
             label="Ver en Mapa"
             type="submit"
@@ -316,48 +311,62 @@
             "
           />
         </div>
+        <div class="col-4 text-center" style="display: flex; flex-direction:column; align-items:center; justify-content:center" >
+              <q-img
+                width="80%"
+                src="icons\Bien_Estar_PNG-01.png"
+                :ratio="16/16"
+              />              
+          </div>
         <!-- iconos y ver en mapa -->
-        <div class="col-6 text-center">
-          <q-btn
-            class="bg-dark q-ma-sm"
-            flat
-            round
-            dense
-            color="white"
-            @click="
-              GoToLink(
-                'https://www.facebook.com/Centro-Integral-Bien-Estar-100957679021251'
-              )
-            "
-          >
-            <q-icon name="fab fa-facebook-f" class="text-primary"></q-icon>
-          </q-btn>
-          <q-btn
-            class="bg-dark q-ma-sm"
-            flat
-            round
-            dense
-            color="white"
-            @click="
-              GoToLink('https://www.instagram.com/centrointegral.bienestar/')
-            "
-          >
-            <q-icon name="fab fa-instagram" class="text-primary"></q-icon>
-          </q-btn>
-          <q-btn
-            class="bg-dark q-ma-sm"
-            flat
-            round
-            dense
-            color="white"
-            @click="
-              GoToLink(
-                'https://api.whatsapp.com/send?phone=56973752280&text=%C2%A1Hola!%20'
-              )
-            "
-          >
-            <q-icon name="fab fa-whatsapp" class="text-primary"></q-icon>
-          </q-btn>
+        <div class="col-4" style="display: flex; flex-direction: row; align-items:center;justify-content:center">
+          <div class="q-mr-sm">
+            <q-btn
+              class="bg-dark"
+              flat
+              round
+              color="white"
+              size="sm"
+              @click="
+                GoToLink(
+                  'https://www.facebook.com/Centro-Integral-Bien-Estar-100957679021251'
+                )
+              "
+            >
+              <q-icon name="fab fa-facebook-f" class="text-primary"></q-icon>
+            </q-btn>
+          </div>
+          <div class="q-mr-sm">
+            <q-btn
+              class="bg-dark "
+              flat
+              round
+              color="white"
+              size="sm"
+              @click="
+                GoToLink('https://www.instagram.com/centrointegral.bienestar/')
+              "
+            >
+              <q-icon name="fab fa-instagram" class="text-primary"></q-icon>
+            </q-btn>
+
+          </div>
+          <div class="q-mr-sm">
+            <q-btn
+              class="bg-dark "
+              flat
+              round
+              color="white"
+              size="sm"
+              @click="
+                GoToLink(
+                  'https://api.whatsapp.com/send?phone=56973752280&text=%C2%A1Hola!%20'
+                )
+              "
+            >
+              <q-icon name="fab fa-whatsapp" class="text-primary"></q-icon>
+            </q-btn>
+          </div>
         </div>
 
       </div>

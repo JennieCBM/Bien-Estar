@@ -97,7 +97,7 @@
       <q-drawer
         v-model="drawerLeft"               
         elevated
-        class="bg-white text-dark "
+        class="bg-white text-dark"
         style="max-width: 80%"
       > 
       <q-scroll-area class="fit">
@@ -106,6 +106,10 @@
               <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScrollNavbar('conocenos')">Conócenos</q-btn>
             </div>
 
+            <div class="text-center text-uppercase q-pt-lg" id="tab-navbar">
+              <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="ChangeNavbar">Quienes Somos</q-btn> 
+            </div>
+            
             <div class="text-center text-uppercase q-pt-lg" id="tab-navbar" >
               <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScrollNavbar('especialidades')">Especialidades</q-btn>
             </div>
@@ -117,6 +121,7 @@
             <div class="text-center text-uppercase q-pt-lg" id="tab-navbar">
               <q-btn rounded flat class="bg-white q-pl-md q-pr-md" @click="handleScrollNavbar('contactenos')">Sucursales</q-btn> 
             </div>
+            
           </div>
         </q-scroll-area>
       </q-drawer>   
@@ -174,6 +179,10 @@ export default {
             this.$router.push({name:"profesionales"});
             return;
           }
+          if(link && link == "profesionales"){
+            this.$router.push({name:"profesionales"});
+            return;
+          }
           if(link && link == "contactenos" && el){
             el= document.querySelector('body')
             const target = getScrollTarget(el)
@@ -210,6 +219,7 @@ export default {
     },
     ChangeNavbar(){
       this.showEnlaces = false;
+      this.drawerLeft=false;
       this.$router.push({name:'about'})
       
     },
