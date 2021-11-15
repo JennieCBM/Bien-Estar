@@ -1,9 +1,9 @@
 <template>
-  <router-view v-if="appload"/>
+  <router-view/>
 </template>
 <script>
-import {Loading} from 'quasar';
-import debounce from 'lodash/debounce'
+/* import {Loading} from 'quasar';
+import debounce from 'lodash/debounce' */
 export default {
   name: 'App',
   data(){
@@ -11,13 +11,13 @@ export default {
       appload:false
     }
   },
-  mounted() {
+/*   mounted() {
     Loading.show()
       this.$nextTick(debounce(() => {
           this.appload = true;
           Loading.hide()
       }, 250)) 
-  },
+  }, */
 }
 </script>
 <style>
