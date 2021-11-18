@@ -8,29 +8,32 @@
       <div class="offset-1 col-3">
         <q-list dense padding class="rounded-borders" style="padding: 40% 0 0 0%">
           <q-item style="display:flex; flex-direction: row; align-items:center">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psiquiatría
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psiquiatría Holística
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center ">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psicología
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psicología Adultos
+          </q-item>
+          <q-item style="display:flex; flex-direction: row; align-items:center ">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Terapia de Pareja
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psiquiatría infantil y adolescencia
-          </q-item>
-          <q-item style="display:flex; flex-direction: row; align-items:center">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psicología infantil y adolescencia
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psiquiatría infantil y juvenil
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center">
             <q-icon class="q-pr-sm" name="remove" color="dark"/> Psicología diversidad e identidad de género
+          </q-item>
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Coaching Positivo personas y empresas
           </q-item>
         </q-list>
       </div>
       <div class="col-3">
         <q-list dense padding class="rounded-borders" style="padding: 40% 0 0 0%">
           <q-item style="display:flex; flex-direction: row; align-items:center">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Nutrición
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Nutrición (Auriculoterapia)
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Nutrición y bienestar integral infantil y adolescencia
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Nutrición bienestar integral infantil 
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center">
             <q-icon class="q-pr-sm" name="remove" color="dark"/> Nutrición y bienestar integral Mujer
@@ -45,7 +48,7 @@
         <q-img
             class="q-mt-xl overflow-normal"
             style=""
-            src="img\Eat.jpg"
+            src="img\Eat.png"
             :ratio="11/13"
             width="80%"
             >
@@ -66,8 +69,8 @@
         <q-img
           class=" overflow-normal"
           style="left:15%; top: 0"
-          src="img\woman_3.jpg"
-          :ratio="13/9"
+          src="img\woman_3.png"
+          :ratio="13/13"
           width="80%"
           >
             <div 
@@ -89,7 +92,16 @@
             <q-icon class="q-pr-sm" name="remove" color="dark"/> Masajes Integrales
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Masoterapia
+          </q-item>
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Mindfulness
+          </q-item>
+          <q-item style="display:flex; flex-direction: row; align-items:center">
             <q-icon class="q-pr-sm" name="remove" color="dark"/> Flores de Bach
+          </q-item>
+          <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Carta Astral
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center">
             <q-icon class="q-pr-sm" name="remove" color="dark"/> Felicidad y Bienestar empresas
@@ -98,23 +110,29 @@
             <q-icon class="q-pr-sm" name="remove" color="dark"/> Talleres y charlas a medida
           </q-item>
         </q-list>
+        <q-item style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Fonoaudiología Infantil y Adultos 
+          </q-item>
       </div>
       <div class="col-3">
         <q-list dense padding class="rounded-borders" style="padding: 30% 0 0 0; ">
           <q-item style="display:flex; flex-direction: row; align-items:center">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Obesidad integral 
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Audiometría
+          </q-item>
+          <q-item class="" style="display:flex; flex-direction: row; align-items:center">
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> 
+            <p class="q-pa-none q-ma-none">
+              Psicopedagogía: Evaluación <span class="normalize-font">Ados2</span>
+            </p>
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Mindfullness
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Terapia Ocupacional Infantil y Adultos
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Fonoaudiología
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Medición de Felicidad Organizacional: Método Perma
           </q-item>
           <q-item style="display:flex; flex-direction: row; align-items:center">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Psicopedagogía
-          </q-item>
-          <q-item style="display:flex; flex-direction: row; align-items:center">
-            <q-icon class="q-pr-sm" name="remove" color="dark"/> Mesoterapia
+            <q-icon class="q-pr-sm" name="remove" color="dark"/> Talleres y Charlas como traje a la medida.
           </q-item>
         </q-list>
       </div>
@@ -129,7 +147,7 @@
           <q-img
               class="q-mt-md overflow-normal"
               style=""
-              src="img\Eat.jpg"
+              src="img\Eat.png"
               :ratio="16/5"
               width="100%"
               >
@@ -144,33 +162,36 @@
       </div>
       <div class="col-6 q-mt-md q-mb-md q-pl-md q-pr-md responsive-md-text text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between">
           <div class="q-pa-sm">
-            Psiquiatría
+            Psiquiatría Holística
           </div>
           <div class="q-pa-sm">
-            Psicología
+            Psicología Adultos
           </div>
           <div class="q-pa-sm">
-            Psiquiatría infantil y adolescencia
+            Terapia de Pareja
           </div>
           <div class="q-pa-sm">
-            Psicología infantil y adolescencia
+            Psicología Infantil y Juvenil
           </div>
           <div class="q-pa-sm">
             Psicología diversidad e identidad de género
           </div>
+          <div class="q-pa-sm">
+            Coaching Positivo personas y empresas
+          </div>
       </div>
       <div class="col-6 q-mt-md q-mb-md q-pl-md q-pr-md responsive-md-text  text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between">
           <div class="q-pa-sm">
-            Nutrición
+            Nutrición (Auriculoterapia)
           </div>
           <div class="q-pa-sm">
-            Nutrición y bienestar integral infantil y adolescencia
+            Nutrición bienestar integral infantil
           </div>  
           <div class="q-pa-sm">
             Nutrición y bienestar integral Mujer
           </div>
           <div class="q-pa-sm">
-            Nutrición y bienestar integral Deportistas  
+            Nutrición bienestar integral deportistas  
           </div>     
       </div>
       
@@ -181,7 +202,7 @@
       <div class="col-12 text-center">          
         <q-img
           class=" overflow-normal"
-          src="img\woman_3.jpg"
+          src="img\woman_3.png"
           :ratio="16/5"
           width="100%"
           >
@@ -202,30 +223,36 @@
             Masajes Integrales
           </div>
           <div class="q-pa-sm">
+            Masoterapia
+          </div>
+          <div class="q-pa-sm">
+            Mindfulness
+          </div>
+          <div class="q-pa-sm">
             Flores de Bach
           </div>
           <div class="q-pa-sm">
-            Felicidad y Bienestar empresas
+            Carta Astral
           </div>
           <div class="q-pa-sm">
-            Talleres y charlas a medida
+            Talleres y Charlas como traje a la medida
           </div>
       </div>
       <div class="col-6 q-mt-md q-mb-md q-pl-md q-pr-md responsive-md-text  text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between">
           <div class="q-pa-sm">
-            Obesidad integral
+            Fonoaudiología Infantil y Adultos
           </div>
           <div class="q-pa-sm">
-            Mindfullness
+            Audiometría
           </div>  
           <div class="q-pa-sm">
-            Fonoaudiología
+            Psicopedagogía: Evaluación <span class="normalize-font">Ados2</span>
           </div>
           <div class="q-pa-sm">
-            Psicopedagogía  
+            Terapia Ocupacional Infantil y Adultos  
           </div>     
           <div class="q-pa-sm">
-            Mesoterapia  
+            Medición de Felicidad Organizacional: Método Perma  
           </div>     
       </div>
       <!-- <div class="col-6 q-pl-xl q-pt-lg demi_bold">
@@ -285,7 +312,7 @@ export default {
 </script>
 <style>
 .imagen_central {
-  background-image: url("../../public/img/Imagen_central.jpg");
+  background-image: url("../../public/img/Imagen_central.png");
   background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;

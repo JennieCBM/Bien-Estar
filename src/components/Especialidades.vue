@@ -165,7 +165,7 @@ export default {
 </script>
 <style>
 .imagen_central {
-  background-image: url("../../public/img/Imagen_central.jpg");
+  background-image: url("../../public/img/Imagen_central.png");
   background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -173,7 +173,7 @@ export default {
   position: relative;
 }
 .imagen_central-mobile {
-  background-image: url("../../public/img/Imagen_central_mobile.jpg");
+  background-image: url("../../public/img/Imagen_central_mobile.png");
   background-size: 100%;
   background-repeat: no-repeat;
   height: 50em;

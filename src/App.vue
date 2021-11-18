@@ -2,8 +2,6 @@
   <router-view/>
 </template>
 <script>
-/* import {Loading} from 'quasar';
-import debounce from 'lodash/debounce' */
 export default {
   name: 'App',
   data(){
@@ -11,15 +9,11 @@ export default {
       appload:false
     }
   },
-/*   mounted() {
-    Loading.show()
-      this.$nextTick(debounce(() => {
-          this.appload = true;
-          Loading.hide()
-      }, 250)) 
-  }, */
 }
 </script>
 <style>
-
+.normalize-font{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+}
 </style>
