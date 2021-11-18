@@ -243,7 +243,7 @@
               <q-img
                 class=""
                 style=""
-                src="img\Direccion.png"
+                src="img\Direct.png"
                 :ratio="16/9"
                 height="100%"
                 width="100%"
