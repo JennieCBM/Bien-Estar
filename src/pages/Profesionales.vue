@@ -8,10 +8,13 @@
         <div class="row ">
 
             <div class="col-sm-12 col-md-12">
-                <q-card class="  text-justify" :class="$q.platform.is.desktop ? 'my-card-p q-pa-xl' : ''" flat >
+                <q-card class="text-justify" :class="$q.platform.is.desktop ? 'my-card-p q-pa-xl' : ''" flat >
                 <q-card-section class="" :horizontal="$q.platform.is.desktop" :class="$q.platform.is.desktop ? 'my-card-p' : ''">
-                    <q-card-section class="bg-primary col-4">
+                    <q-card-section class="bg-primary col-4 content-card align-center">
                         <!-- Foto aca -->
+                        <q-img 
+                        src="img/Foto-Maria-Pia.png"
+                        width="100%"/>
                     </q-card-section>
                     <q-card-section class="extra_light content-card">
                         <div class="text-h6 demi_bold q-pb-md" >
@@ -48,7 +51,11 @@
             <div class="col-sm-12 col-md-12">
                 <q-card class="  text-justify" :class="$q.platform.is.desktop ? 'my-card-p q-pa-xl' : ''" flat >
                 <q-card-section class="" :horizontal="$q.platform.is.desktop" :class="$q.platform.is.desktop ? 'my-card-p' : ''">
-                    <q-card-section class="bg-accent col-4">
+                    <q-card-section class="bg-accent col-4 content-card align-center">
+                        <q-img 
+                        src="img/Foto-Alejandra-Medina.png"
+                        width="100%"
+                        />
                         <!-- Foto aca -->
                     </q-card-section>
                     <q-card-section class="extra_light content-card">
@@ -73,6 +80,10 @@
                 <q-card class="  text-justify" :class="$q.platform.is.desktop ? 'my-card-p q-pa-xl' : ''" flat >
                 <q-card-section class="" :horizontal="$q.platform.is.desktop" :class="$q.platform.is.desktop ? 'my-card-p' : ''">
                     <q-card-section class="bg-primary col-4">
+                        <q-img 
+                        src="img/Foto-Claudio-Ibarra.png"
+                        width="100%"
+                        />
                         <!-- Foto aca -->
                     </q-card-section>
                     <q-card-section class="extra_light content-card">
@@ -112,6 +123,10 @@
                 <q-card class="  text-justify" :class="$q.platform.is.desktop ? 'my-card-p q-pa-xl' : ''" flat >
                 <q-card-section class="" :horizontal="$q.platform.is.desktop" :class="$q.platform.is.desktop ? 'my-card-p' : ''">
                     <q-card-section class="bg-accent col-4">
+                        <q-img 
+                        src="img/Foto-Sadi-Medina.png"
+                        width="100%"
+                        />
                         <!-- Foto aca -->
                     </q-card-section>
                     <q-card-section class="extra_light content-card">
@@ -470,5 +485,10 @@ export default {
     display:flex;
     flex-direction: column; 
     justify-content:center;
+}
+.align-center{
+    display:flex;
+    flex-direction: column; 
+    align-items:center;
 }
 </style>

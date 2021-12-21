@@ -13,13 +13,15 @@
         v-model="slide"
         height="23em"
         class="bg-transparent"
-        style="z-index: 1000; max-width: 80%; margin: 0 auto"
+        style="z-index: 1000; max-width: 90%; margin: 0 auto"
         infinite
-        :autoplay="false"
+        :autoplay="true"
         transition-prev="slide-right"
         transition-next="slide-left"
       >
-        <q-carousel-slide name="style" class="column no-wrap flex-center">
+        <!-- Nota: cada una de estas secciones (slide) es una pagina del carousel sugerencia: mantener el patrón-->
+
+        <q-carousel-slide name="1" class="column no-wrap flex-center">
           <q-separator
             inset
             class="q-mt-xl"
@@ -27,25 +29,42 @@
             style="margin-left: 25em; margin-right: 25em"
           />
           <div class="q-ma-lg">
-            <div class="text-h4 demi_bold text-center">Paciente María Pía</div>
-            <br />
-            <div class="text-uppercase demi_bold" style="font-size: 1.5em">
-              Ahorro / precio justo
+
+            <div class="text-h4 demi_bold text-center">
+              Esteban López
             </div>
-            <div class="extra_light" style="font-size: 1.5em;">
+
+            <div>
+              <span class="normalize-font" style="font-weight: bolder">
+                47 años
+              </span> 
+            </div>
+
+            <div class="text-uppercase demi_bold q-mt-md" style="font-size: 1.5em">
+              Profesional, María Pía Fernández (Psicóloga)
+            </div>
+
+            <div class="extra_light" style="font-size: 1.5em; display: flex; flex-direction: row; align-items: space-between; max-width: 80%; margin: 2% auto">
               <q-icon
                 name="img:img/Comillas_abiertas.png"
                 size="3em"
                 class="q-mr-lg"
               />
-              ¡No pagues de más! paga lo justo por tu
-              <span class="demi_bold">Bien-Estar!</span>
+              <div class="text-body2 text-justify" >
+                Hace muchos años tuve unas sesiones de sicología y fue una mala experiencia. Me dije que no
+                volvería a pedir ayuda de este tipo. Pasado unos años conocí por rrss a una chica que de inmediato
+                me inspiró confianza. Decidí tomar sesiones con ella, y comencé a hablar con alguien que de
+                verdad me escuchaba y me dio las herramientas para tomar las riendas de mi vida, me abrió los
+                ojos para ver lo que estaba mal en mí y lo que debía modificar, en resumen, me dio una nueva
+                oportunidad de vivir y poder volver a ser feliz...
+              </div>
               <q-icon
                 name="img:img/Comillas_cerradas.png"
                 size="3em"
                 class="q-ml-lg"
               />
             </div>
+
           </div>
           <q-separator
             inset
@@ -54,67 +73,308 @@
             style="margin-left: 25em; margin-right: 25em"
           />
         </q-carousel-slide>
-        <!-- <q-carousel-slide name="tv" class="column no-wrap flex-center">
-          <q-img 
-            src="icons/Bien_Estar_PNG-01.png"
-            :ratio="1" 
-            width="10em" 
-            style="filter: grayscale(1);"
+        
+        <q-carousel-slide name="2" class="column no-wrap flex-center">
+          <q-separator
+            inset
+            class="q-mt-xl"
+            size="1px"
+            style="margin-left: 25em; margin-right: 25em"
           />
-        </q-carousel-slide> -->
-        <!-- <q-carousel-slide name="layers" class="column no-wrap flex-center">
+          <div class="q-ma-lg">
+            <div class="text-h4 demi_bold text-center">
+              Mamá de Santiago Quintano</div>
+            <div>
+              <span class="normalize-font" style="font-weight: bolder">
+                8 años
+              </span> 
+            </div>
+            <div class="text-uppercase demi_bold q-mt-md" style="font-size: 1.5em">
+              Profesional, Niccie Guzmán (Fonoaudióloga)
+            </div>
+
+            <div class="extra_light" style="font-size: 1.5em; display: flex; flex-direction: row; align-items: space-between; max-width: 80%; margin: 2% auto">
+              <q-icon
+                name="img:img/Comillas_abiertas.png"
+                size="3em"
+                class="q-mr-lg"
+              />
+              <div class="text-body2 text-justify" >
+                Todas las semanas mi hijo Santiago va a sus sesiones de Fonoaudiología con Niccie donde lo recibe
+                con mucho cariño y, a través del juego, avanza es sus tareas rápidamente.
+              </div>
+              <q-icon
+                name="img:img/Comillas_cerradas.png"
+                size="3em"
+                class="q-ml-lg"
+              />
+            </div>
+
+          </div>
+          <q-separator
+            inset
+            class="q-mb-xl q-mt-sm"
+            size="1px"
+            style="margin-left: 25em; margin-right: 25em"
+          />
         </q-carousel-slide>
-        <q-carousel-slide name="map" class="column no-wrap flex-center">
-        </q-carousel-slide> -->
+
+        <q-carousel-slide name="3" class="column no-wrap flex-center">
+          <q-separator
+            inset
+            class="q-mt-xl"
+            size="1px"
+            style="margin-left: 25em; margin-right: 25em"
+          />
+          <div class="q-ma-lg">
+            <div class="text-h4 demi_bold text-center ">
+              Álvaro</div>
+            <div>
+              <span class="normalize-font " style="font-weight: bolder">
+                38 años
+              </span> 
+            </div>
+            <div class="text-uppercase demi_bold q-mt-md" style="font-size: 1.5em">
+              Profesional, Mario Rivera (Masoterapeuta Integral y Reikista)
+            </div>
+
+            <div class="extra_light" style="font-size: 1.5em; display: flex; flex-direction: row; align-items: space-between; max-width: 80%; margin: 2% auto">
+              <q-icon
+                name="img:img/Comillas_abiertas.png"
+                size="3em"
+                class="q-mr-lg"
+              />
+              <div class="text-body2 text-justify" >
+                Mario es una persona muy profesional. He notado su evolución con respecto a sus terapias
+                alternativas. La energía que transmite a través de sus manos es transformadora. Me doy mi
+                tiempo para poder repetir esta experiencia ya que noto los cambios en mi cuerpo luego de las
+                sesiones que tengo con él. Destaco su profesionalismo y su calidez.
+              </div>
+              <q-icon
+                name="img:img/Comillas_cerradas.png"
+                size="3em"
+                class="q-ml-lg"
+              />
+            </div>
+
+          </div>
+          <q-separator
+            inset
+            class="q-mb-xl q-mt-sm"
+            size="1px"
+            style="margin-left: 25em; margin-right: 25em"
+          />
+        </q-carousel-slide>
+
+        <q-carousel-slide name="4" class="column no-wrap flex-center">
+          <q-separator
+            inset
+            class="q-mt-xl"
+            size="1px"
+            style="margin-left: 25em; margin-right: 25em"
+          />
+          <div class="q-ma-lg">
+            <div class="text-h4 demi_bold text-center ">
+              Valeria</div>
+            <div>
+              <span class="normalize-font " style="font-weight: bolder">
+                26 años
+              </span> 
+            </div>
+            <div class="text-uppercase demi_bold q-mt-md" style="font-size: 1.5em">
+              Profesional, Mariana Carrasquero (Psicóloga)
+            </div>
+
+            <div class="extra_light" style="font-size: 1.5em; display: flex; flex-direction: row; align-items: space-between; max-width: 80%; margin: 2% auto">
+              <q-icon
+                name="img:img/Comillas_abiertas.png"
+                size="3em"
+                class="q-mr-lg"
+              />
+              <div class="text-body2 text-justify" >
+                La Psicóloga Mariana ha sido una guía a través de este camino del autodescubrimiento, un espacio
+              estable en el cual pude ser capaz de expresar mis pensamientos sin sentirme juzgada. Me ha
+              enseñado durante el tiempo conociéndonos a tener una perspectiva diferente sobre las pequeñas
+              cosas de la vida e ir encajando piezas como un puzzle. Confianza y respeto, pero sobre todo un
+              lugar seguro para mis emociones.
+              </div>
+              <q-icon
+                name="img:img/Comillas_cerradas.png"
+                size="3em"
+                class="q-ml-lg"
+              />
+            </div>
+
+          </div>
+          <q-separator
+            inset
+            class="q-mb-xl q-mt-sm"
+            size="1px"
+            style="margin-left: 25em; margin-right: 25em"
+          />
+        </q-carousel-slide>
+
+        <q-carousel-slide name="5" class="column no-wrap flex-center">
+          <q-separator
+            inset
+            class="q-mt-xl"
+            size="1px"
+            style="margin-left: 25em; margin-right: 25em"
+          />
+          <div class="q-ma-lg">
+            <div class="text-h4 demi_bold text-center ">
+              José Domingo</div>
+            <div>
+              <span class="normalize-font " style="font-weight: bolder">
+                23 años
+              </span> 
+            </div>
+            <div class="text-uppercase demi_bold q-mt-md" style="font-size: 1.5em">
+              Profesional, Álvaro Parra (Terapeuta Ocupacional adultos)
+            </div>
+
+            <div class="extra_light" style="font-size: 1.5em; display: flex; flex-direction: row; align-items: space-between; max-width: 80%; margin: 2% auto">
+              <q-icon
+                name="img:img/Comillas_abiertas.png"
+                size="3em"
+                class="q-mr-lg"
+              />
+              <div class="text-body2 text-justify" >
+                Desde que estoy con Álvaro he podido ordenarme con mis qué haceres de la universidad, además
+                me siento muy a gusto con su ayuda.
+              </div>
+              <q-icon
+                name="img:img/Comillas_cerradas.png"
+                size="3em"
+                class="q-ml-lg"
+              />
+            </div>
+
+          </div>
+          <q-separator
+            inset
+            class="q-mb-xl q-mt-sm"
+            size="1px"
+            style="margin-left: 25em; margin-right: 25em"
+          />
+        </q-carousel-slide>
+
       </q-carousel>
     </q-banner>
 
-
     <!-- Carousel Version mobile  -->
-    <div v-if="$q.platform.is.mobile" class="text-center text-dark q-pt-lg q-pb-lg" style="background: #eeeef6">
+    <div v-if="$q.platform.is.mobile" class="text-center text-dark q-pb-lg" style="background: #eeeef6">
       <q-carousel
-        arrows
         control-color="dark"
         animated
         v-model="slide"
         class="bg-transparent q-pa-none q-ma-none"
-        height="15em"
+        height="32em"
         infinite
-        :autoplay="false"
+        navigation
+        :autoplay="3000"
         transition-prev="slide-right"
         transition-next="slide-left"
       >
-        <q-carousel-slide name="style" class="column no-wrap flex-center">
-          <div class="" style="max-width: 80%">
-            <div class="text-h4 demi_bold text-center">Paciente María Pía</div>
-            <br />
-            <div class="text-uppercase demi_bold text-h6" style="">
-              Ahorro / precio justo
+      <!-- Nota: cada una de estas secciones (slide) es una pagina del carousel sugerencia: mantener el patrón-->
+        <q-carousel-slide name="1" class="column no-wrap flex-center">
+          <div class="" style="max-width: 100%">
+            <div class="text-h4 demi_bold text-center q-pb-md" style="line-height: .7em">Esteban López, <br><span class="normalize-font" style="font-weight: bold">
+                47
+              </span>años</div>
+            <div class="text-uppercase demi_bold q-pb-md" style="font-size: 1em">
+              Profesional, María Pía Fernández (Psicóloga)
             </div>
-            <div class="extra_light" style="font-size: 1.5em;">
-              ¡No pagues de más! 
-              <br>
-              paga lo justo por tu
-              <span class="demi_bold">Bien-Estar!</span>
+            <div class="extra_light" style="font-size: 1em; display: flex; flex-direction: row; align-items: space-between; max-width: 80%; margin: 2% auto">
+              <div class="text-center">
+                Hace muchos años tuve unas sesiones de sicología y fue una mala experiencia. Me dije que no
+                volvería a pedir ayuda de este tipo. Pasado unos años conocí por rrss a una chica que de inmediato
+                me inspiró confianza. Decidí tomar sesiones con ella, y comencé a hablar con alguien que de
+                verdad me escuchaba y me dio las herramientas para tomar las riendas de mi vida, me abrió los
+                ojos para ver lo que estaba mal en mí y lo que debía modificar, en resumen, me dio una nueva
+                oportunidad de vivir y poder volver a ser feliz...
+              </div>
             </div>
           </div>
         </q-carousel-slide>
-        
-        <!-- Nota: cada una de estas secciones (slide) es una pagina del carousel sugerencia: mantener el patrón-->
 
-        <!-- <q-carousel-slide name="style" class="column no-wrap flex-center">
-          <div class="" style="max-width: 80%">
-            <div class="text-h4 demi_bold text-center">Paciente María Pía</div>
-            <br />
-            <div class="text-uppercase demi_bold" style="font-size: 1.5em">
-              Ahorro / precio justo
+        <q-carousel-slide name="2" class="column no-wrap flex-center">
+          <div class="" style="max-width: 100%">
+            <div class="text-h4 demi_bold text-center q-pb-md"
+            style="line-height: .7em">Mamá de Santiago Quintano, <br><span class="normalize-font" style="font-weight: bold">
+                8
+              </span>años</div>
+            <div class="text-uppercase demi_bold q-pb-md" style="font-size: 1em">
+              Profesional, Niccie Guzmán (Fonoaudióloga)
             </div>
-            <div class="extra_light" style="font-size: 1.5em;">
-              ¡No pagues de más! paga lo justo por tu
-              <span class="demi_bold">Bien-Estar!</span>
+            <div class="extra_light" style="font-size: 1em; display: flex; flex-direction: row; align-items: space-between; max-width: 80%; margin: 2% auto">
+              <div class="text-center">
+                Todas las semanas mi hijo Santiago va a sus sesiones de Fonoaudiología con Niccie donde lo recibe
+                con mucho cariño y, a través del juego, avanza es sus tareas rápidamente.
+              </div>
             </div>
           </div>
-        </q-carousel-slide> -->
+        </q-carousel-slide>
+
+        <q-carousel-slide name="3" class="column no-wrap flex-center">
+          <div class="" style="max-width: 100%">
+            <div class="text-h4 demi_bold text-center q-pb-md"
+            style="line-height: .7em">Álvaro, <span class="normalize-font" style="font-weight: bold">
+                38
+              </span>años</div>
+            <div class="text-uppercase demi_bold q-pb-md" style="font-size: 1em">
+              Profesional, Mario Rivera (Masoterapeuta Integral y Reikista)
+            </div>
+            <div class="extra_light" style="font-size: 1em; display: flex; flex-direction: row; align-items: space-between; max-width: 80%; margin: 2% auto">
+              <div class="text-center">
+                Mario es una persona muy profesional. He notado su evolución con respecto a sus terapias
+                alternativas. La energía que transmite a través de sus manos es transformadora. Me doy mi
+                tiempo para poder repetir esta experiencia ya que noto los cambios en mi cuerpo luego de las
+                sesiones que tengo con él. Destaco su profesionalismo y su calidez.
+              </div>
+            </div>
+          </div>
+        </q-carousel-slide>
+
+        <q-carousel-slide name="4" class="column no-wrap flex-center">
+          <div class="" style="max-width: 100%">
+            <div class="text-h4 demi_bold text-center q-pb-md"
+            style="line-height: .7em">Valeria, <span class="normalize-font" style="font-weight: bold">
+                26
+              </span>años</div>
+            <div class="text-uppercase demi_bold q-pb-md" style="font-size: 1em">
+              Profesional, Mariana Carrasquero (Psicóloga)
+            </div>
+            <div class="extra_light" style="font-size: 1em; display: flex; flex-direction: row; align-items: space-between; max-width: 80%; margin: 2% auto">
+              <div class="text-center">
+                La Psicóloga Mariana ha sido una guía a través de este camino del autodescubrimiento, un espacio
+              estable en el cual pude ser capaz de expresar mis pensamientos sin sentirme juzgada. Me ha
+              enseñado durante el tiempo conociéndonos a tener una perspectiva diferente sobre las pequeñas
+              cosas de la vida e ir encajando piezas como un puzzle. Confianza y respeto, pero sobre todo un
+              lugar seguro para mis emociones.
+              </div>
+            </div>
+          </div>
+        </q-carousel-slide>
+
+        <q-carousel-slide name="5" class="column no-wrap flex-center">
+          <div class="" style="max-width: 100%">
+            <div class="text-h4 demi_bold text-center q-pb-md"
+            style="line-height: .7em">José Domingo, <span class="normalize-font" style="font-weight: bold">
+                23
+              </span>años</div>
+            <div class="text-uppercase demi_bold q-pb-md" style="font-size: 1em">
+              Profesional, Álvaro Parra (Terapeuta Ocupacional adultos)
+            </div>
+            <div class="extra_light" style="font-size: 1em; display: flex; flex-direction: row; align-items: space-between; max-width: 80%; margin: 2% auto">
+              <div class="text-center">
+                Desde que estoy con Álvaro he podido ordenarme con mis qué haceres de la universidad, además
+                me siento muy a gusto con su ayuda.
+              </div>
+            </div>
+          </div>
+        </q-carousel-slide>
+
       </q-carousel>
     </div>
     <!-- Imagen central - desktop -->
@@ -156,7 +416,7 @@ export default {
   name: "Carousel",
   data() {
     return {
-      slide: "style",
+      slide: "1",
       autoplay: true,
     };
   },
